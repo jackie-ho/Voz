@@ -31,16 +31,10 @@ public class ApiRequestFactory {
 
         URL urlObject;
         HttpURLConnection connection;
-        String url = "https://api-qa.zaplabs.com/hackathon/getBySql/";
-
-
+        String url = "https://api-qa.zaplabs.com/hackathon/getBySql?";
+        
         try {
-
-
             writeParams(params,sql, pageNum, pageSize);
-//            connection.setRequestProperty("sql", sql);
-//            connection.setRequestProperty("pageNum", "1");
-//            connection.setRequestProperty("pageSize", "10");
 
             String uriEncodedParams = URLEncodedUtils.format(params, "utf-8");
             url += uriEncodedParams;
@@ -54,11 +48,6 @@ public class ApiRequestFactory {
 
             connection = (HttpURLConnection) urlObject.openConnection();
             connection.setRequestMethod("GET");
-
-//            DataOutputStream wr = new DataOutputStream(
-//                    connection.getOutputStream());
-//            wr.writeBytes(uriEncodedParams);
-//            wr.close();
 
             int responseCode = connection.getResponseCode();
             BufferedReader in = new BufferedReader(
