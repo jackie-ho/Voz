@@ -21,10 +21,7 @@ public class LexLambdaHandlerTest {
 
 
     @Test
-    public void testRequestSucceeds() {
-
-
-
+    public void testRequestReturnsBenBurnsidesPersonnelData() {
         Context testContext = getContext();
 
         Map<String, Object> input           = new HashMap<>();

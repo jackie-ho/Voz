@@ -22,6 +22,8 @@ public class LexRequestFactory {
         lexRequest.setIntentName(intentName); // Set this to be specific to the intent -> like show content
         lexRequest.setSlots(slots);
         // use if/else to write different slots depending on the intent
+
+
         return lexRequest;
     }
 }
