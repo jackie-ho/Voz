@@ -1,13 +1,13 @@
 package com.ziprealty.hackathon.zap;
 
 
+import com.ziprealty.hackathon.Lex.MessageObject.SQLResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -22,12 +22,11 @@ import java.util.List;
  */
 public class ApiRequestFactory {
 
-    public ApiRequestFactory() {
-    }
-
-    public String sendGet(String sql, String pageNum, String pageSize) {
+    public SQLResponse sendGet(String sql, String pageNum, String pageSize) {
 
         List<NameValuePair> params = new LinkedList<>();
+
+        SQLResponse response = new SQLResponse();
 
         URL urlObject;
         HttpURLConnection connection;
@@ -39,12 +38,9 @@ public class ApiRequestFactory {
             String uriEncodedParams = URLEncodedUtils.format(params, "utf-8");
             url += uriEncodedParams;
 
-            try {
-                urlObject = new URL(url);
-            }
-            catch (MalformedURLException e) {
-                return "Malformed URL:" + e.getMessage();
-            }
+
+            urlObject = new URL(url);
+
 
             connection = (HttpURLConnection) urlObject.openConnection();
             connection.setRequestMethod("GET");
@@ -53,19 +49,24 @@ public class ApiRequestFactory {
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(connection.getInputStream()));
             String inputLine;
-            StringBuilder response = new StringBuilder();
+            StringBuilder httpResponse = new StringBuilder();
 
             while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
+                httpResponse.append(inputLine);
             }
             in.close();
-            return "response code: " + responseCode  + " message:" + response.toString();
+            response.setResponseCode(responseCode);
+            response.setMessage(httpResponse.toString());
+        }
+        catch (MalformedURLException e) {
+            response.setResponseCode(500);
+            response.setMessage("Malformed URL:" + e.getMessage());
         }
         catch (IOException e) {
-            return "IO Exception:" + e.getMessage();
+            response.setResponseCode(500);
+            response.setMessage( "IO Exception:" + e.getMessage());
         }
-
-
+        return response;
     }
 
     private void writeParams(List<NameValuePair> params, String sql, String pageNum, String pageSize) {

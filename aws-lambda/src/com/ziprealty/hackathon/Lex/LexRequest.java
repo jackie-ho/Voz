@@ -9,6 +9,8 @@ public class LexRequest {
     private String botName;
     private String intentName;
     private Map<String, Object> slots;
+    private boolean hasError;
+    private String errorMessage;
 
     public void setBotName(String botName) {
         this.botName = botName;
@@ -32,5 +34,21 @@ public class LexRequest {
 
     public Map<String, Object> getSlots() {
         return slots;
+    }
+
+    public boolean hasError() {
+        return hasError;
+    }
+
+    public void setHasError(boolean hasError) {
+        this.hasError = hasError;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 }

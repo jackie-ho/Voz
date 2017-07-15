@@ -6,6 +6,7 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.ziprealty.hackathon.Lex.LexResponse;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Collections;
@@ -19,19 +20,32 @@ import java.util.Map;
  */
 public class LexLambdaHandlerTest {
 
+    private Context testContext;
+    private Map<String, Object> input;
+    private Map<String, Object> botMap;
+    private Map<String, Object> currentIntent;
+    private Map<String, Object> slots;
 
-    @Test
-    public void testRequestReturnsBenBurnsidesPersonnelData() {
-        Context testContext = getContext();
+    private LexLambdaHandler testLambdaHandler;
 
-        Map<String, Object> input           = new HashMap<>();
-        Map<String, Object> botMap          = new HashMap<>();
-        Map<String, Object> currentIntent   = new HashMap<>();
-        Map<String, Object> slots           = new HashMap<>();
+    @Before
+    public void setUp(){
+        testContext = getContext();
 
+        testLambdaHandler = new LexLambdaHandler();
+
+        input           = new HashMap<>();
+        botMap          = new HashMap<>();
+        currentIntent   = new HashMap<>();
+        slots           = new HashMap<>();
 
         botMap.put("alias", "testRequestBot");
         botMap.put("name", "TestBotVoz");
+    }
+
+    @Test
+    public void testRequestReturnsBenBurnsidesPersonnelData() {
+
 
         currentIntent.put("name", "TestGetString");
         slots.put("dessert", "Creme Brulee");
@@ -40,12 +54,29 @@ public class LexLambdaHandlerTest {
         input.put("bot", botMap);
         input.put("currentIntent", currentIntent);
 
-        LexLambdaHandler testLambdaHandler = new LexLambdaHandler();
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
         String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
-
+        System.out.println(jsonResponse);
         Assert.assertTrue(jsonResponse.contains("185667"));
+
+    }
+
+    @Test
+    public void testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData() {
+
+        currentIntent.put("name", "DisplayContact");
+        slots.put("FirstName", "Ben");
+        slots.put("LastName", "Burnside");
+        currentIntent.put("slots", slots);
+
+        input.put("bot", botMap);
+        input.put("currentIntent", currentIntent);
+
+        LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
+        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
+        System.out.println(jsonResponse);
+        Assert.assertTrue(jsonResponse.contains("Ben"));
 
     }
 
