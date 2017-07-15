@@ -8,13 +8,16 @@ import com.ziprealty.hackathon.Lex.MessageObject.DialogAction;
 import com.ziprealty.hackathon.Lex.MessageObject.Message;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
+import com.ziprealty.hackathon.Lex.MessageObject.SQLResponse;
 import com.ziprealty.hackathon.POJO.Personnel;
+import com.ziprealty.hackathon.util.StringUtils;
 import com.ziprealty.hackathon.zap.ApiRequestFactory;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import static com.ziprealty.hackathon.Lex.ResponseBuilder.buildResponseForDisplayContact;
 import static com.ziprealty.hackathon.util.Constants.*;
 
 /**
@@ -32,45 +35,19 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
     public LexResponse handleRequest(Map<String, Object> input, Context context) {
 
         LexRequest lexRequest = LexRequestFactory.createLexRequest(input);
-        ApiRequestFactory apiRequest = new ApiRequestFactory();
+        String response = "NO RESPONSE SET";
 
-        String sql = "SELECT * FROM personnel WHERE personnel_id = 185667";
-        String response = "";
-
-        // write the output message with hte lexRequest from here
-        //String content = String.format("Request came from Bot: %s, Intent: %s ", lexRequest.getBotName(), lexRequest.getIntentName());
-        String sqlResponse = "";
-
-        if("TestGetString".equals(lexRequest.getIntentName())) {
-            sqlResponse = apiRequest.sendGet(sql, "1", "10");
+        if (DISPLAY_CONTACT_INTENT.equals(lexRequest.getIntentName())) {
+            response = buildResponseForDisplayContact(lexRequest);
         }
-
-        if(DISPLAY_CONTACT_INTENT.equals(lexRequest.getIntentName())) {
-            sql = "SELECT * FROM personnel WHERE LOWER(first_name) = LOWER('" + lexRequest.getSlots().get("FirstName") + "') " +
-                    "AND LOWER(last_name) = LOWER('" + lexRequest.getSlots().get("LastName") + "') ";
-            sqlResponse = apiRequest.sendGet(sql, "1", "10");
-            // if we get more than one item in the list, we should throw an error or ask to specify which person he means, by the email address perhaps
-        }
-        try {
-            List<Personnel> personnelResponseList = JSONParser.parseJSONToPersonnel(sqlResponse);
-            if(personnelResponseList.isEmpty()) {
-                response = "No personnel found by that name";
-            }
-            else {
-                Personnel personnel = personnelResponseList.get(0);
-                response = String.format("%s %s", personnel.getFirstName(), personnel.getLastName());
-            }
-        }
-        catch (IOException e) {
-            response = e.getMessage();
-        }
-        
-//        sqlResponse = StringUtils.condenseResponse(sqlResponse);
+        response = StringUtils.condenseResponse(response);
 
         Message message = new Message(PLAIN_TEXT, response);
         DialogAction dialogAction = new DialogAction(CLOSE, FULFILLED, message);
         return new LexResponse(dialogAction);
     }
+
+
 
 
 }

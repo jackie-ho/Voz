@@ -66,8 +66,7 @@ public class LexLambdaHandlerTest {
     public void testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData() {
 
         currentIntent.put("name", "DisplayContact");
-        slots.put("FirstName", "Ben");
-        slots.put("LastName", "Burnside");
+        slots.put("FullName", "Ben Burnside");
         currentIntent.put("slots", slots);
 
         input.put("bot", botMap);
