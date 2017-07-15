@@ -5,6 +5,7 @@ import com.amazonaws.services.lambda.runtime.CognitoIdentity;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.ziprealty.hackathon.Lex.LexResponse;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Collections;
@@ -45,7 +46,9 @@ public class LexLambdaHandlerTest {
         LexLambdaHandler testLambdaHandler = new LexLambdaHandler();
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        System.out.println(lexResponse.getDialogAction().getMessage().getContent());
+        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
+
+        Assert.assertTrue(jsonResponse.contains("185667"));
 
     }
 

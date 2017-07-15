@@ -32,7 +32,7 @@ public class ApiRequestFactory {
         URL urlObject;
         HttpURLConnection connection;
         String url = "https://api-qa.zaplabs.com/hackathon/getBySql?";
-        
+
         try {
             writeParams(params,sql, pageNum, pageSize);
 
