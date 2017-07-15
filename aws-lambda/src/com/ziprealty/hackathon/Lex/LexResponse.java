@@ -1,6 +1,6 @@
 package com.ziprealty.hackathon.Lex;
 
-import com.ziprealty.hackathon.Lex.MessageObjects.DialogAction;
+import com.ziprealty.hackathon.Lex.MessageObject.DialogAction;
 
 /**
  * Created by jamgale on 7/14/17.

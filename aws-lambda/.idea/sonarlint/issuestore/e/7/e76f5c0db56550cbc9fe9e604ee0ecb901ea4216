@@ -1,0 +1,4 @@
+
+Tsquid:S1118":Add a private constructor to hide the implicit public one.(î¿ý„üÿÿÿÿ
+isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹±ÆÐüÿÿÿÿ
+Esquid:S1172"+Remove this unused method parameter "args".(¹±ÆÐüÿÿÿÿ

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Voz.iml" filepath="$PROJECT_DIR$/Voz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aws-lambda.iml" filepath="$PROJECT_DIR$/aws-lambda.iml" />
     </modules>
   </component>
 </project>

@@ -22,7 +22,8 @@ public class TestLexRequestClass {
         AmazonLexRuntime client = AmazonLexRuntimeClientBuilder.standard().withRegion(Regions.US_EAST_1).build();
 
         PostTextRequest textRequest = new PostTextRequest();
-        // Set Params
+
+        // Set Bot Params
         textRequest.setBotAlias("testRequestBot");
         textRequest.setBotName("TestBotVoz");
         textRequest.setUserId("testuser");
