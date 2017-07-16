@@ -8,10 +8,10 @@ public class DialogAction {
     private String type;
     private String fulfillmentState;
 
-    private Message message;
+    private LexMessage message;
 
 
-    public DialogAction(String type, String fulfillmentState, Message message) {
+    public DialogAction(String type, String fulfillmentState, LexMessage message) {
         this.type = type;
         this.fulfillmentState = fulfillmentState;
         this.message = message;
@@ -26,7 +26,7 @@ public class DialogAction {
         return fulfillmentState;
     }
 
-    public Message getMessage() {
+    public LexMessage getLexMessage() {
         return message;
     }
 

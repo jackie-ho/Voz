@@ -8,21 +8,107 @@ package com.ziprealty.hackathon.Lex.MessageObject;
  *
  * We can pass Ben's details and ask if you want to call him
  */
-
 public class SessionAttributes {
-    private String key1;
-    private String key2;
 
-    public SessionAttributes(String key1, String key2) {
-        this.key1 = key1;
-        this.key2 = key2;
+    private String zipScore;
+    private String lastContactDate;
+    private String lrSourceName;
+    private String clientType;
+    private String medianHomePrice;
+    private String clientId;
+    private String contactRelationDescId;
+    private String customerId;
+    private String lastName;
+    private String firstName;
+    private String clientAgentId;
+
+    public String getZipScore() {
+        return zipScore;
     }
 
-    public String getKey1() {
-        return key1;
+    public void setZipScore(String zipScore) {
+        this.zipScore = zipScore;
     }
 
-    public void setKey1(String key1) {
-        this.key1 = key1;
+    public String getLastContactDate() {
+        return lastContactDate;
     }
+
+    public void setLastContactDate(String lastContactDate) {
+        this.lastContactDate = lastContactDate;
+    }
+
+    public String getLrSourceName() {
+        return lrSourceName;
+    }
+
+    public void setLrSourceName(String lrSourceName) {
+        this.lrSourceName = lrSourceName;
+    }
+
+    public String getClientType() {
+        return clientType;
+    }
+
+    public void setClientType(String clientType) {
+        this.clientType = clientType;
+    }
+
+    public String getMedianHomePrice() {
+        return medianHomePrice;
+    }
+
+    public void setMedianHomePrice(String medianHomePrice) {
+        this.medianHomePrice = medianHomePrice;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getContactRelationDescId() {
+        return contactRelationDescId;
+    }
+
+    public void setContactRelationDescId(String contactRelationDescId) {
+        this.contactRelationDescId = contactRelationDescId;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getClientAgentId() {
+        return clientAgentId;
+    }
+
+    public void setClientAgentId(String clientAgentId) {
+        this.clientAgentId = clientAgentId;
+    }
+
 }
+

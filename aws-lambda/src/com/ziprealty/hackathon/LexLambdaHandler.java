@@ -1,23 +1,19 @@
 package com.ziprealty.hackathon;
 
-import com.ziprealty.hackathon.Jackson.JSONParser;
 import com.ziprealty.hackathon.Lex.LexRequest;
 import com.ziprealty.hackathon.Lex.LexRequestFactory;
 import com.ziprealty.hackathon.Lex.LexResponse;
 import com.ziprealty.hackathon.Lex.MessageObject.DialogAction;
-import com.ziprealty.hackathon.Lex.MessageObject.Message;
+import com.ziprealty.hackathon.Lex.MessageObject.LexMessage;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.ziprealty.hackathon.Lex.MessageObject.SQLResponse;
-import com.ziprealty.hackathon.POJO.Personnel;
+import com.ziprealty.hackathon.Lex.MessageObject.SessionAttributes;
+import com.ziprealty.hackathon.POJO.Contact;
 import com.ziprealty.hackathon.util.StringUtils;
-import com.ziprealty.hackathon.zap.ApiRequestFactory;
-
-import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
-import static com.ziprealty.hackathon.Lex.ResponseBuilder.buildResponseForDisplayContact;
+import static com.ziprealty.hackathon.Lex.ResponseBuilder.getContactFromRequest;
 import static com.ziprealty.hackathon.util.Constants.*;
 
 /**
@@ -36,18 +32,34 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
 
         LexRequest lexRequest = LexRequestFactory.createLexRequest(input);
         String response = "NO RESPONSE SET";
+        SessionAttributes sessionAttributes = new SessionAttributes();
+
+        Contact contact;
 
         if (DISPLAY_CONTACT_INTENT.equals(lexRequest.getIntentName())) {
-            response = buildResponseForDisplayContact(lexRequest);
+            contact = getContactFromRequest(lexRequest);
+            response = contact.getFirstName() + " " + contact.getLastName();
+            sessionAttributes = createSessionAttributesFromContact(contact);
         }
+
+        if (SHOW_TODAYS_SCHEDULE.equals(lexRequest.getIntentName()) || SHOW_WEEK_SCHEDULE.equals(lexRequest.getIntentName())) {
+            response = lexRequest.getInputTranscript();
+//            sessionAttributes.setInputTranscript(response);
+        }
+
         response = StringUtils.condenseResponse(response);
 
-        Message message = new Message(PLAIN_TEXT, response);
-        DialogAction dialogAction = new DialogAction(CLOSE, FULFILLED, message);
-        return new LexResponse(dialogAction);
+        LexMessage lexMessage = new LexMessage(PLAIN_TEXT, response);
+
+        DialogAction dialogAction = new DialogAction(CLOSE, FULFILLED, lexMessage);
+        return new LexResponse(dialogAction, sessionAttributes);
     }
 
-
-
-
+    private SessionAttributes createSessionAttributesFromContact(Contact contact) {
+        SessionAttributes sessionAttributes = new SessionAttributes();
+        sessionAttributes.setFirstName(contact.getFirstName());
+        sessionAttributes.setLastName(contact.getLastName());
+        sessionAttributes.setCustomerId(Integer.toString(contact.getCustomerId()));
+        return sessionAttributes;
+    }
 }

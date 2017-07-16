@@ -9,9 +9,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.ziprealty.hackathon.util.Constants.SHOW_TODAYS_SCHEDULE;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -43,41 +44,39 @@ public class LexLambdaHandlerTest {
         botMap.put("name", "TestBotVoz");
     }
 
-    @Test
-    public void testRequestReturnsBenBurnsidesPersonnelData() {
-
-
-        currentIntent.put("name", "TestGetString");
-        slots.put("dessert", "Creme Brulee");
-        currentIntent.put("slots", slots);
-
-        input.put("bot", botMap);
-        input.put("currentIntent", currentIntent);
-
-
-        LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
-        System.out.println(jsonResponse);
-        Assert.assertTrue(jsonResponse.contains("185667"));
-
-    }
 
     @Test
-    public void testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData() {
+    public void testDisplayContactWithMichelle_displaysMichellesData() {
 
         currentIntent.put("name", "DisplayContact");
-        slots.put("FullName", "Ben Burnside");
+        slots.put("FullName", "Michelle Martinez");
         currentIntent.put("slots", slots);
 
         input.put("bot", botMap);
         input.put("currentIntent", currentIntent);
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
+        String jsonResponse = lexResponse.getDialogAction().getLexMessage().getContent();
         System.out.println(jsonResponse);
-        Assert.assertTrue(jsonResponse.contains("Ben"));
-
+        Assert.assertTrue(jsonResponse.contains("Michelle"));
     }
+
+    @Test
+    public void testShowTodaysSchedule_returnsTranscript() {
+
+        currentIntent.put("name", SHOW_TODAYS_SCHEDULE);
+        input.put("bot", botMap);
+        input.put("currentIntent", currentIntent);
+        input.put("inputTranscript", "This is the transcript");
+
+        LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
+        String jsonResponse = lexResponse.getDialogAction().getLexMessage().getContent();
+        System.out.println(jsonResponse);
+        Assert.assertTrue(jsonResponse.equals("This is the transcript"));
+    }
+
+
+
 
     private Context getContext() {
         Context context = new Context() {

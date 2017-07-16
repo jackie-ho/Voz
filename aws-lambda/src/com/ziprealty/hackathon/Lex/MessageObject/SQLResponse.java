@@ -24,4 +24,5 @@ public class SQLResponse {
         this.message = message;
     }
 
+
 }

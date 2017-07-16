@@ -11,6 +11,7 @@ public class LexRequest {
     private Map<String, Object> slots;
     private boolean hasError;
     private String errorMessage;
+    private String inputTranscript;
 
     public void setBotName(String botName) {
         this.botName = botName;
@@ -50,5 +51,13 @@ public class LexRequest {
 
     public void setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
+    }
+
+    public String getInputTranscript() {
+        return inputTranscript;
+    }
+
+    public void setInputTranscript(String inputTranscript) {
+        this.inputTranscript = inputTranscript;
     }
 }

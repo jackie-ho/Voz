@@ -21,52 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiRequestFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/zap/ApiRequestFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiRequestFactoryTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com.ziprealty.hackathon/zap/ApiRequestFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SQLResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SQLResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LexLambdaHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LexLambdaHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,21 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/util/Constants.java">
+      <file leaf-file-name="LexRequestFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResponseBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/ResponseBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,8 +48,18 @@
       <file leaf-file-name="LexLambdaHandlerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com.ziprealty.hackathon/LexLambdaHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="-560">
+              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/util/StringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,26 +67,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Jackson/JSONParser.java">
+      <file leaf-file-name="LexRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#1172#1173#0" expanded="true" />
+                <element signature="e#1210#1211#0" expanded="true" />
+                <element signature="e#1272#1273#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/util/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestLexRequestClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/TestLexRequestClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="38" column="69" lean-forward="false" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LexRequestFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java">
+      <file leaf-file-name="DialogAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/DialogAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,6 +136,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Personnel</find>
+      <find>personnel</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Contact</replace>
+      <replace>contact</replace>
+    </replaceStrings>
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -152,28 +156,34 @@
       <list>
         <option value="$PROJECT_DIR$/../Android/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/Constnats.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/TestLexRequestClass.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/TestLexLambda.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHanlder.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/util/StringComparator.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SessionAttributes.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequest.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/Constants.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/util/Constants.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/util/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/POJO/Personnel.java" />
         <option value="$PROJECT_DIR$/test/com.ziprealty.hackathon/POJO/JSONParserTest.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Jackson/JSONParser.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SQLReponse.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/zap/ApiRequestFactory.java" />
         <option value="$PROJECT_DIR$/test/com.ziprealty.hackathon/util/StringUtilsTest.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SlotManager.java" />
         <option value="$PROJECT_DIR$/test/com.ziprealty.hackathon/zap/ApiFactoryTest.java" />
         <option value="$PROJECT_DIR$/test/com.ziprealty.hackathon/zap/ApiRequestFactoryTest.java" />
+        <option value="$PROJECT_DIR$/test/com.ziprealty.hackathon/Lex/SlotManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SlotManager.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Jackson/JSONParser.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/POJO/Contact.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/ResponseBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/TestLexRequestClass.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SessionAttributes.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SQLResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SessionAttributes.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequest.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/DialogAction.java" />
         <option value="$PROJECT_DIR$/test/com.ziprealty.hackathon/LexLambdaHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/ResponseBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexResponse.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/util/Constants.java" />
+        <option value="$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java" />
       </list>
     </option>
   </component>
@@ -182,6 +192,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
@@ -210,6 +223,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="aws-lambda" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -247,6 +270,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com.ziprealty.hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -264,11 +327,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com.ziprealty.hackathon" />
+              <option name="myItemId" value="hackathon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -286,55 +349,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com.ziprealty.hackathon" />
+              <option name="myItemId" value="hackathon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="POJO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aws-lambda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aws-lambda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aws-lambda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aws-lambda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,6 +401,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Lex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MessageObject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aws-lambda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackathon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Jackson" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -392,7 +441,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
@@ -400,59 +449,19 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData">
-    <configuration default="false" name="LexLambdaHandlerTest.testRequestReturnsBenBurnsidesPersonnelData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.ziprealty.hackathon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="aws-lambda" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.ziprealty.hackathon" />
-      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.LexLambdaHandlerTest" />
-      <option name="METHOD_NAME" value="testRequestReturnsBenBurnsidesPersonnelData" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.ziprealty.hackathon.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.util.StringComparator" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="aws-lambda" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.LexLambdaHandlerTest">
     <configuration default="false" name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -479,19 +488,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="JSONParserTest.JSONParserParsesSQL_IntoPersonnelObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SlotManagerTest.slotExistsReturnsTrueWhenSlotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.ziprealty.hackathon.POJO.*" />
+          <option name="PATTERN" value="com.ziprealty.hackathon.Lex.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="aws-lambda" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.ziprealty.hackathon.POJO" />
-      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.POJO.JSONParserTest" />
-      <option name="METHOD_NAME" value="JSONParserParsesSQL_IntoPersonnelObject" />
+      <option name="PACKAGE_NAME" value="com.ziprealty.hackathon.Lex" />
+      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.Lex.SlotManagerTest" />
+      <option name="METHOD_NAME" value="slotExistsReturnsTrueWhenSlotExists" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -505,20 +514,67 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="StringUtilsTest.testStringUtils_CondenseStringCondensesString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="All in aws-lambda" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="aws-lambda" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.ziprealty.hackathon.util.*" />
+          <option name="PATTERN" value="com.ziprealty.hackathon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="aws-lambda" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.ziprealty.hackathon.util" />
-      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.util.StringUtilsTest" />
-      <option name="METHOD_NAME" value="testStringUtils_CondenseStringCondensesString" />
+      <option name="PACKAGE_NAME" value="com.ziprealty.hackathon" />
+      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.LexLambdaHandlerTest" />
+      <option name="METHOD_NAME" value="testShowTodaysSchedule_returnsTranscript" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="LexLambdaHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ziprealty.hackathon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="aws-lambda" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ziprealty.hackathon" />
+      <option name="MAIN_CLASS_NAME" value="com.ziprealty.hackathon.LexLambdaHandlerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -905,19 +961,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testRequestReturnsBenBurnsidesPersonnelData" />
-      <item index="1" class="java.lang.String" itemvalue="Application.StringComparator" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JSONParserTest.JSONParserParsesSQL_IntoPersonnelObject" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StringUtilsTest.testStringUtils_CondenseStringCondensesString" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SlotManagerTest.slotExistsReturnsTrueWhenSlotExists" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All in aws-lambda" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StringUtilsTest.testStringUtils_CondenseStringCondensesString" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JSONParserTest.JSONParserParsesSQL_IntoPersonnelObject" />
-        <item index="3" class="java.lang.String" itemvalue="Application.StringComparator" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testRequestReturnsBenBurnsidesPersonnelData" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SlotManagerTest.slotExistsReturnsTrueWhenSlotExists" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.All in aws-lambda" />
       </list>
     </recent_temporary>
   </component>
@@ -933,44 +989,44 @@
       <updated>1500072277947</updated>
       <workItem from="1500072279211" duration="1081000" />
       <workItem from="1500073944368" duration="1000" />
-      <workItem from="1500073973319" duration="14501000" />
+      <workItem from="1500073973319" duration="25706000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JSONParserTest_JSONParserParsesSQL_IntoPersonnelObject - 2017.07.15 at 14h 54m 18s.xml">
-      <configuration name="JSONParserTest.JSONParserParsesSQL_IntoPersonnelObject" configurationId="JUnit" />
+    <history-entry file="LexLambdaHandlerTest - 2017.07.15 at 21h 44m 15s.xml">
+      <configuration name="LexLambdaHandlerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 14h 52m 44s.xml">
+    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 18h 21m 45s.xml">
       <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 14h 56m 55s.xml">
+    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 18h 22m 11s.xml">
       <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 14h 57m 10s.xml">
+    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 18h 23m 16s.xml">
       <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 15h 24m 40s.xml">
+    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 18h 40m 00s.xml">
       <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 15h 27m 09s.xml">
-      <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
+    <history-entry file="LexLambdaHandlerTest_testShowTodaysSchedule_returnsTranscript - 2017.07.15 at 19h 31m 42s.xml">
+      <configuration name="LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 15h 27m 45s.xml">
-      <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
+    <history-entry file="LexLambdaHandlerTest_testShowTodaysSchedule_returnsTranscript - 2017.07.15 at 19h 32m 59s.xml">
+      <configuration name="LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 15h 33m 25s.xml">
-      <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
+    <history-entry file="LexLambdaHandlerTest_testShowTodaysSchedule_returnsTranscript - 2017.07.15 at 19h 33m 10s.xml">
+      <configuration name="LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LexLambdaHandlerTest_testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData - 2017.07.15 at 15h 35m 09s.xml">
-      <configuration name="LexLambdaHandlerTest.testDisplayContactWithBenBurnside_displaysBenBurnsidePersonnelData" configurationId="JUnit" />
+    <history-entry file="LexLambdaHandlerTest_testShowTodaysSchedule_returnsTranscript - 2017.07.15 at 19h 33m 31s.xml">
+      <configuration name="LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_testStringUtils_CondenseStringCondensesString - 2017.07.15 at 14h 56m 44s.xml">
-      <configuration name="StringUtilsTest.testStringUtils_CondenseStringCondensesString" configurationId="JUnit" />
+    <history-entry file="LexLambdaHandlerTest_testShowTodaysSchedule_returnsTranscript - 2017.07.15 at 19h 33m 42s.xml">
+      <configuration name="LexLambdaHandlerTest.testShowTodaysSchedule_returnsTranscript" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15583000" />
+    <option name="totallyTimeSpent" value="26788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -978,7 +1034,7 @@
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1021,13 +1077,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/com.ziprealty.hackathon/LexLambdaHandlerTest.java</url>
-          <line>77</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHandler.java</url>
-          <line>44</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -1037,8 +1093,38 @@
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SlotManager.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/ResponseBuilder.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHandler.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1154,26 +1240,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/TestLexRequestClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/aws-lambda-java-core-1.1.0.jar!/com/amazonaws/services/lambda/runtime/RequestHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1185,66 +1255,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1891#1900#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SessionAttributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#796#797#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/POJO/Personnel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1272,17 +1282,7 @@
         <state relative-caret-position="135">
           <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/zap/ApiRequestFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1303,9 +1303,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/POJO/Personnel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="205">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/aws-java-sdk-lex-1.11.94.jar!/com/amazonaws/services/lexruntime/model/PostTextRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-lexmodelbuilding/1.11.163/aws-java-sdk-lexmodelbuilding-1.11.163.jar!/com/amazonaws/services/lexmodelbuilding/AmazonLexModelBuildingClientBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-lexmodelbuilding/1.11.163/aws-java-sdk-lexmodelbuilding-1.11.163-sources.jar!/com/amazonaws/services/lexmodelbuilding/AmazonLexModelBuildingClientBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-lexmodelbuilding/1.11.163/aws-java-sdk-lexmodelbuilding-1.11.163-sources.jar!/com/amazonaws/services/lexmodelbuilding/AmazonLexModelBuilding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="952" column="22" lean-forward="false" selection-start-line="952" selection-start-column="22" selection-end-line="952" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-core/1.11.163/aws-java-sdk-core-1.11.163.jar!/com/amazonaws/AmazonWebServiceRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-core/1.11.163/aws-java-sdk-core-1.11.163.jar!/com/amazonaws/auth/AWSCredentialsProviderChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-632">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-core/1.11.163/aws-java-sdk-core-1.11.163.jar!/com/amazonaws/auth/AWSCredentialsProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-core/1.11.163/aws-java-sdk-core-1.11.163.jar!/com/amazonaws/auth/AWSStaticCredentialsProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-lexmodelbuilding/1.11.163/aws-java-sdk-lexmodelbuilding-1.11.163-sources.jar!/com/amazonaws/services/lexmodelbuilding/AmazonLexModelBuildingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="44" column="65" lean-forward="false" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar!/org/apache/http/message/BasicNameValuePair.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar!/org/apache/http/NameValuePair.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-lexmodelbuilding/1.11.163/aws-java-sdk-lexmodelbuilding-1.11.163-sources.jar!/com/amazonaws/services/lexmodelbuilding/model/GetSlotTypeRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1569">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SlotManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1313,35 +1422,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SlotManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/POJO/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="-240">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SQLResponse.java">
+    <entry file="file://$PROJECT_DIR$/test/com.ziprealty.hackathon/Lex/SlotManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1350,18 +1442,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Jackson/JSONParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="191">
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com.ziprealty.hackathon/LexLambdaHandlerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/zap/ApiRequestFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1370,10 +1462,162 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/ResponseBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="506">
+          <caret line="63" column="29" lean-forward="false" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/SessionAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="105" column="5" lean-forward="false" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SQLResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/SessionAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+          <folding>
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+            <element signature="e#1985#1986#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="true" />
+            <element signature="e#2070#2071#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2149#2150#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2228#2229#0" expanded="true" />
+            <element signature="e#2268#2269#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2336#2337#0" expanded="true" />
+            <element signature="e#2386#2387#0" expanded="true" />
+            <element signature="e#2428#2429#0" expanded="true" />
+            <element signature="e#2468#2469#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#2612#2613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/LexMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/TestLexRequestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" column="69" lean-forward="false" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/MessageObject/DialogAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com.ziprealty.hackathon/LexLambdaHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-560">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1381,15 +1625,15 @@
     <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/util/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/LexLambdaHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ziprealty/hackathon/Lex/LexRequestFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1455,7 +1699,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1475,7 +1718,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>lib</last-edited>
+          <last-edited>com.amazonaws:aws-java-sdk-lexmodelbuilding:Latest</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
