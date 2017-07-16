@@ -1,4 +1,4 @@
-package com.ziprealty.hackathon.Lex.MessageObject;
+package com.ziprealty.hackathon.lex.messageObject;
 
 /**
  * Created by jamgale on 7/14/17.

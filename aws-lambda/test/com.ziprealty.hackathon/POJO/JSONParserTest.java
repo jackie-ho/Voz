@@ -1,6 +1,6 @@
-package com.ziprealty.hackathon.POJO;
+package com.ziprealty.hackathon.pojo;
 
-import com.ziprealty.hackathon.Jackson.JSONParser;
+import com.ziprealty.hackathon.jackson.JSONParser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

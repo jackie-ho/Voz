@@ -1,16 +1,10 @@
-package com.ziprealty.hackathon.Lex;
+package com.ziprealty.hackathon.lex;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.lexmodelbuilding.AmazonLexModelBuilding;
 import com.amazonaws.services.lexmodelbuilding.AmazonLexModelBuildingClientBuilder;
 import com.amazonaws.services.lexmodelbuilding.model.GetSlotTypeRequest;
 import com.amazonaws.services.lexmodelbuilding.model.GetSlotTypeResult;
-import com.amazonaws.services.lexruntime.AmazonLexRuntime;
-import com.amazonaws.services.lexruntime.AmazonLexRuntimeClientBuilder;
-import com.amazonaws.services.lexruntime.model.PostTextRequest;
 import com.amazonaws.util.StringUtils;
 
 /**

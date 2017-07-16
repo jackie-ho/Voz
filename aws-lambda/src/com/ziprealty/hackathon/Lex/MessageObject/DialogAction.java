@@ -1,4 +1,6 @@
-package com.ziprealty.hackathon.Lex.MessageObject;
+package com.ziprealty.hackathon.lex.messageObject;
+
+import java.util.Map;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -10,6 +12,8 @@ public class DialogAction {
 
     private Message message;
     private String slotToElicit;
+    private String intentName;
+    private Map<String, Object> slots;
 
 
     public DialogAction(String type, String fulfillmentState, Message message) {
@@ -39,4 +43,19 @@ public class DialogAction {
         this.slotToElicit = slotToElicit;
     }
 
+    public String getIntentName() {
+        return intentName;
+    }
+
+    public void setIntentName(String intentName) {
+        this.intentName = intentName;
+    }
+
+    public Map<String, Object> getSlots() {
+        return slots;
+    }
+
+    public void setSlots(Map<String, Object> slots) {
+        this.slots = slots;
+    }
 }

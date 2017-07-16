@@ -1,9 +1,10 @@
-package com.ziprealty.hackathon.Lex;
+package com.ziprealty.hackathon.lex;
 
-import com.ziprealty.hackathon.Jackson.JSONParser;
-import com.ziprealty.hackathon.Lex.MessageObject.SQLResponse;
-import com.ziprealty.hackathon.POJO.Contact;
-import com.ziprealty.hackathon.POJO.Event;
+import com.ziprealty.hackathon.jackson.JSONParser;
+import com.ziprealty.hackathon.lex.messageObject.SQLResponse;
+import com.ziprealty.hackathon.pojo.Contact;
+import com.ziprealty.hackathon.pojo.Event;
+import com.ziprealty.hackathon.pojo.TelephoneNumber;
 import com.ziprealty.hackathon.zap.ApiRequestFactory;
 
 import java.io.IOException;
@@ -19,27 +20,12 @@ public class ResponseBuilder {
         Contact contact;
         String sql;
         SQLResponse sqlResponse;
-        String firstName;
-        String lastName;
+        String firstName = extractFirstName(lexRequest);
+        String lastName = extractSurname(lexRequest);
+
+
 
         ApiRequestFactory apiRequest = new ApiRequestFactory();
-
-        String fullName = (String) lexRequest.getSlots().get("FullName");
-
-        // if there are three names returned, hyphenate the last two
-        String[] names = fullName.split(("\\s+"));
-        if (names.length == 2) {
-            firstName = names[0];
-            lastName  = names[1];
-        }
-        else if (names.length == 3) {
-            firstName = names[0];
-            lastName = names[1] + "-" + names[2];
-        }
-        else{
-            firstName = "NA";
-            lastName  = "NA";
-        }
 
         sql = "SELECT c.first_name, c.last_name, " +
                 "CASE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
@@ -73,13 +59,62 @@ public class ResponseBuilder {
         return contact;
     }
 
-    public static Event getNextEvent(LexRequest lexRequest) {
+    private static String extractSurname(LexRequest lexRequest) {
+        String fullName = (String) lexRequest.getSlots().get("FullName");
+        // if there are three names returned, hyphenate the last two
+        String[] names = fullName.split(("\\s+"));
+
+        if (names.length == 2) {
+            return names[1];
+        } else if (names.length == 3) {
+            return names[1] + "-" + names[2];
+        }
+        return "NA";
+    }
+
+    private static String extractFirstName(LexRequest lexRequest) {
+        String fullName = (String) lexRequest.getSlots().get("FullName");
+
+        // if there are three names returned, hyphenate the last two
+        String[] names = fullName.split(("\\s+"));
+        return names[0];
+    }
+
+    public static Event getNextEventFromRequest(LexRequest lexRequest) {
         Event nextEvent = new Event();
 
-
-
-
+        
         return nextEvent;
+    }
+
+    public static String getPhoneNumberFromRequest(LexRequest lexRequest) {
+        String firstName = extractFirstName(lexRequest);
+        String lastName = extractSurname(lexRequest);
+
+        ApiRequestFactory apiRequestFactory = new ApiRequestFactory();
+
+        String sql = String.format("SELECT " +
+                     "CASE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
+                     "WHEN '()-' then null " +
+                     "ELSE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
+                     "END as TELEPHONE_NUMBER " +
+                     "from telephone_number tn " +
+                     "join customer c on c.customer_id = tn.customer_id " +
+                     "where lower(c.first_name) = lower('%s') AND lower(c.last_name) = lower('%s')", firstName, lastName);
+
+        SQLResponse sqlResponse = apiRequestFactory.sendGet(sql, "1", "10");
+
+        try {
+            List<TelephoneNumber> telephoneNumbers = JSONParser.parseJSONToTelephoneNumber(sqlResponse.getMessage());
+            if (telephoneNumbers.isEmpty()) {
+                return null;
+            } else {
+                return telephoneNumbers.get(0).getTelephoneNumber();
+            }
+        }
+        catch (IOException e) {
+            return "";
+        }
     }
 
 

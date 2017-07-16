@@ -1,4 +1,4 @@
-package com.ziprealty.hackathon.Lex;
+package com.ziprealty.hackathon.lex;
 
 import java.util.Map;
 

@@ -13,6 +13,7 @@ public final class Constants {
     public static final String CONFIRM_INTENT = "ConfirmIntent";
     public static final String ELICIT_SLOT = "ElicitSlot";
     public static final String DIALOG_CODE_HOOK = "DialogCodeHook";
+    public static final String FULFILLMENT_CODE_HOOK = "FulfillmentCodeHook";
 
 
     public static final String INVOCATION_SOURCE = "invocationSource";
@@ -29,6 +30,10 @@ public final class Constants {
     public static final String NEXT_EVENT = "NextEvent";
     public static final String CALL_CONTACT = "CallContact";
     public static final String DIRECTIONS = "Directions";
+
+    // SLOT NAMES
+
+    public static final String FULL_NAME = "FullName";
 
     public static final    int MAX_STRING_LENGTH = 3000;
 }

@@ -1,7 +1,7 @@
-package com.ziprealty.hackathon.Lex;
+package com.ziprealty.hackathon.lex;
 
-import com.ziprealty.hackathon.Lex.MessageObject.DialogAction;
-import com.ziprealty.hackathon.Lex.MessageObject.SessionAttributes;
+import com.ziprealty.hackathon.lex.messageObject.DialogAction;
+import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -24,4 +24,5 @@ public class LexResponse {
     public SessionAttributes getSessionAttributes() {
         return sessionAttributes;
     }
+
 }

@@ -1,4 +1,4 @@
-package com.ziprealty.hackathon.POJO;
+package com.ziprealty.hackathon.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
