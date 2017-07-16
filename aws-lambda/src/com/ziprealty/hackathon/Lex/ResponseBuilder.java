@@ -46,9 +46,10 @@ public class ResponseBuilder {
                 "WHEN '()-' then null " +
                 "ELSE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
                 "END as TELEPHONE_NUMBER,  " +
-                "cl.zip_score, c.login, c.customer_id FROM Customer c " +
+                "cl.zip_score, c.login, c.customer_id, cl.median_home_price, ca.client_type " +
+                "FROM Customer c " +
                 "JOIN client cl on cl.customer_id = c.customer_id " +
-                "LEFT JOIN telephone_number tn on c.customer_id = tn.customer_id AND tn.is_active = 1 AND tn.is_primary = 1" +
+                "LEFT JOIN telephone_number tn on c.customer_id = tn.customer_id AND tn.is_active = 1 AND tn.is_primary = 1 " +
                 "JOIN client_agent ca on ca.customer_id = c.customer_id " +
                 "WHERE LOWER(c.first_name) = LOWER('" + firstName + "') " +
                 "AND LOWER(c.last_name) = LOWER('" + lastName + "') " +

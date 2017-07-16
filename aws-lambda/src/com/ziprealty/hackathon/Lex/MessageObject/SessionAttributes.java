@@ -18,11 +18,13 @@ public class SessionAttributes {
     private String clientId;
     private String contactRelationDescId;
     private String customerId;
+    private String email;
     private String lastName;
     private String firstName;
     private String clientAgentId;
     private String inputTranscript;
     private String telephoneNumber;
+    private String schedule;
 
     public String getZipScore() {
         return zipScore;
@@ -127,6 +129,22 @@ public class SessionAttributes {
 
     public void setTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
+    }
+
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
 

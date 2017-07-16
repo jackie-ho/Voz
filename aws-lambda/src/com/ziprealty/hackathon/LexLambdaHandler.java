@@ -52,12 +52,14 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
                 case SHOW_TODAYS_SCHEDULE:
                     response = "Showing today's schedule";
                     sessionAttributes.setInputTranscript(response);
+                    sessionAttributes.setSchedule(TODAY);
                     message = new Message(PLAIN_TEXT, response);
                     dialogAction = new DialogAction(CLOSE, FULFILLED, message);
                     break;
                 case SHOW_WEEK_SCHEDULE:
                     response = "Showing this week's schedule";
                     sessionAttributes.setInputTranscript(response);
+                    sessionAttributes.setSchedule(WEEK);
                     message = new Message(PLAIN_TEXT, response);
                     dialogAction = new DialogAction(CLOSE, FULFILLED, message);
                     break;
@@ -67,7 +69,6 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
                     break;
                 case CALL_CONTACT:
                     // would you like to call 'contact saved from view contact'
-
                     if (DIALOG_CODE_HOOK.equals(lexRequest.getInvocationSource())) {
                         // Try both DELEGATE and ElicitSlot
                         if (sessionAttributes.getFirstName() != null) {
@@ -108,6 +109,11 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
         sessionAttributes.setFirstName(contact.getFirstName());
         sessionAttributes.setLastName(contact.getLastName());
         sessionAttributes.setCustomerId(Integer.toString(contact.getCustomerId()));
+        sessionAttributes.setMedianHomePrice(contact.getMedianPrice());
+        sessionAttributes.setClientType(contact.getClientType());
+        sessionAttributes.setTelephoneNumber(contact.getTelephone());
+        sessionAttributes.setEmail(contact.getEmail());
+        sessionAttributes.setZipScore(contact.getZapScore());
         return sessionAttributes;
     }
 }

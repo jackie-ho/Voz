@@ -14,6 +14,7 @@ import java.util.Map;
 
 import static com.ziprealty.hackathon.util.Constants.CALL_CONTACT;
 import static com.ziprealty.hackathon.util.Constants.SHOW_TODAYS_SCHEDULE;
+import static com.ziprealty.hackathon.util.Constants.TODAY;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -73,7 +74,7 @@ public class LexLambdaHandlerTest {
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
         String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
         System.out.println(jsonResponse);
-        Assert.assertTrue(jsonResponse.equals("This is the transcript"));
+        Assert.assertTrue(lexResponse.getSessionAttributes().getSchedule().equals(TODAY));
     }
 
     @Test

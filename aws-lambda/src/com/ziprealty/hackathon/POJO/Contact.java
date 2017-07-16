@@ -29,7 +29,7 @@ public class Contact {
     @JsonProperty("CLIENT_TYPE")
     private String clientType;
 
-    @JsonProperty("MEDIAN_PRICE")
+    @JsonProperty("MEDIAN_HOME_PRICE")
     private String medianPrice;
 
     public int getCustomerId() {
@@ -85,7 +85,22 @@ public class Contact {
     }
 
     public void setClientType(String clientType) {
-        this.clientType = clientType;
+        switch (clientType) {
+            case "1":
+                this.clientType = "Buyer";
+                break;
+            case "2":
+                this.clientType = "Seller";
+                break;
+            case "3":
+                this.clientType = "Buyer & Seller";
+                break;
+            case "4":
+                this.clientType = "Renter";
+                break;
+            default:
+                this.clientType = "UNKNOWN";
+        }
     }
 
     public String getMedianPrice() {

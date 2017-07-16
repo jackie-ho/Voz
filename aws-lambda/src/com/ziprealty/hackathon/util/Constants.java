@@ -15,6 +15,8 @@ public final class Constants {
     public static final String INPUT_TRANSCRIPT = "inputTranscript";
     public static final String DIALOG_CODE_HOOK = "DialogCodeHook";
 
+    public static final String TODAY = "Today";
+    public static final String WEEK = "Week";
 
     // INTENT NAMES
     public static final String DISPLAY_CONTACT_INTENT = "DisplayContact";
