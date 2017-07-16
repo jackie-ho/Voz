@@ -30,7 +30,7 @@ public class LexRequestFactory {
             lexRequest.setIntentName(intentName); // Set this to be specific to the intent -> like show content
             lexRequest.setSlots(slots);
             lexRequest.setInputTranscript(inputTranscript);
-            
+
         }
         catch (Exception e) {
             lexRequest.setHasError(true);

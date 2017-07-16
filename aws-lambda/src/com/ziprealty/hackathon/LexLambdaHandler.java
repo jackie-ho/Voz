@@ -4,16 +4,17 @@ import com.ziprealty.hackathon.Lex.LexRequest;
 import com.ziprealty.hackathon.Lex.LexRequestFactory;
 import com.ziprealty.hackathon.Lex.LexResponse;
 import com.ziprealty.hackathon.Lex.MessageObject.DialogAction;
-import com.ziprealty.hackathon.Lex.MessageObject.LexMessage;
+import com.ziprealty.hackathon.Lex.MessageObject.Message;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.ziprealty.hackathon.Lex.MessageObject.SQLResponse;
 import com.ziprealty.hackathon.Lex.MessageObject.SessionAttributes;
 import com.ziprealty.hackathon.POJO.Contact;
+import com.ziprealty.hackathon.POJO.Event;
 import com.ziprealty.hackathon.util.StringUtils;
 import java.util.Map;
 
 import static com.ziprealty.hackathon.Lex.ResponseBuilder.getContactFromRequest;
+import static com.ziprealty.hackathon.Lex.ResponseBuilder.getNextEvent;
 import static com.ziprealty.hackathon.util.Constants.*;
 
 /**
@@ -46,12 +47,15 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
             response = lexRequest.getInputTranscript();
 //            sessionAttributes.setInputTranscript(response);
         }
+        if (NEXT_EVENT.equals(lexRequest.getIntentName())) {
+            Event nextEvent = getNextEvent();
+        }
 
         response = StringUtils.condenseResponse(response);
 
-        LexMessage lexMessage = new LexMessage(PLAIN_TEXT, response);
+        Message message = new Message(PLAIN_TEXT, response);
 
-        DialogAction dialogAction = new DialogAction(CLOSE, FULFILLED, lexMessage);
+        DialogAction dialogAction = new DialogAction(CLOSE, FULFILLED, message);
         return new LexResponse(dialogAction, sessionAttributes);
     }
 

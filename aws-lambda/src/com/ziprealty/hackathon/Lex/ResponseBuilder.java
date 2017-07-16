@@ -3,6 +3,7 @@ package com.ziprealty.hackathon.Lex;
 import com.ziprealty.hackathon.Jackson.JSONParser;
 import com.ziprealty.hackathon.Lex.MessageObject.SQLResponse;
 import com.ziprealty.hackathon.POJO.Contact;
+import com.ziprealty.hackathon.POJO.Event;
 import com.ziprealty.hackathon.zap.ApiRequestFactory;
 
 import java.io.IOException;
@@ -65,4 +66,14 @@ public class ResponseBuilder {
         }
         return contact;
     }
+
+    public static Event getNextEvent() {
+        Event nextEvent = new Event();
+
+
+        return nextEvent;
+    }
+
+
+
 }

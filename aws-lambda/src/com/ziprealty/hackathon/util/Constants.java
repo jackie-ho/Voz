@@ -12,6 +12,7 @@ public class Constants {
     public static final String DISPLAY_CONTACT_INTENT = "DisplayContact";
     public static final String SHOW_TODAYS_SCHEDULE = "ShowTodaySchedule";
     public static final String SHOW_WEEK_SCHEDULE = "ShowWeekSchedule";
+    public static final String NEXT_EVENT = "NextEvent";
 
     public static final    int MAX_STRING_LENGTH = 3000;
 }

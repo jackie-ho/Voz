@@ -56,7 +56,7 @@ public class LexLambdaHandlerTest {
         input.put("currentIntent", currentIntent);
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        String jsonResponse = lexResponse.getDialogAction().getLexMessage().getContent();
+        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
         System.out.println(jsonResponse);
         Assert.assertTrue(jsonResponse.contains("Michelle"));
     }
@@ -70,7 +70,7 @@ public class LexLambdaHandlerTest {
         input.put("inputTranscript", "This is the transcript");
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        String jsonResponse = lexResponse.getDialogAction().getLexMessage().getContent();
+        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
         System.out.println(jsonResponse);
         Assert.assertTrue(jsonResponse.equals("This is the transcript"));
     }
