@@ -80,7 +80,8 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
                             dialogAction.setSlotToElicit("FullName");
                         }
                     } else {
-                        message = new Message(PLAIN_TEXT, lexRequest.getInvocationSource());
+//                        message = new Message(PLAIN_TEXT, lexRequest.getInvocationSource());
+                        message = new Message(PLAIN_TEXT, "IM HERE and invocation source is  " + lexRequest.getInvocationSource());
                         contact = getContactFromRequest(lexRequest);
                         sessionAttributes = createSessionAttributesFromContact(contact);
                         dialogAction = new DialogAction(CLOSE, FULFILLED, message);
@@ -96,7 +97,7 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
             }
         }
         catch (Exception e) {
-            message = new Message(PLAIN_TEXT, lexRequest.getInvocationSource());
+            message = new Message(PLAIN_TEXT, "IM at a different spot and HERE and invocation source is  " + lexRequest.getInvocationSource());
             dialogAction = new DialogAction(CLOSE, FULFILLED, message);
             sessionAttributes = new SessionAttributes();
         }

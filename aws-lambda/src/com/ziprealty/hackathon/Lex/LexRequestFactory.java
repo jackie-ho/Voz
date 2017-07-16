@@ -2,8 +2,7 @@ package com.ziprealty.hackathon.Lex;
 
 import java.util.Map;
 
-import static com.ziprealty.hackathon.util.Constants.DISPLAY_CONTACT_INTENT;
-import static com.ziprealty.hackathon.util.Constants.INPUT_TRANSCRIPT;
+import static com.ziprealty.hackathon.util.Constants.*;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -18,11 +17,13 @@ public class LexRequestFactory {
             Map<String, Object> botMap = (Map<String, Object>) input.get("bot");
             String botName = (String) botMap.get("name");
 
-            Map<String, Object> intentMap = (Map<String, Object>) input.get("currentIntent");
+            Map<String, Object> intentMap = (Map<String, Object>) input.get(CURRENT_INTENT);
             String intentName = (String) intentMap.get("name");
 
             Map<String, Object> slots = (Map<String, Object>) intentMap.get("slots");
             String inputTranscript = (String) input.get(INPUT_TRANSCRIPT);
+
+            String invocationSource = (String) input.get(INVOCATION_SOURCE);
 
             // Set Request info
 
@@ -30,6 +31,7 @@ public class LexRequestFactory {
             lexRequest.setIntentName(intentName); // Set this to be specific to the intent -> like show content
             lexRequest.setSlots(slots);
             lexRequest.setInputTranscript(inputTranscript);
+            lexRequest.setInvocationSource(invocationSource);
 
         }
         catch (Exception e) {

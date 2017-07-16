@@ -12,8 +12,12 @@ public final class Constants {
     public static final String DELEGATE = "Delegate";
     public static final String CONFIRM_INTENT = "ConfirmIntent";
     public static final String ELICIT_SLOT = "ElicitSlot";
-    public static final String INPUT_TRANSCRIPT = "inputTranscript";
     public static final String DIALOG_CODE_HOOK = "DialogCodeHook";
+
+
+    public static final String INVOCATION_SOURCE = "invocationSource";
+    public static final String INPUT_TRANSCRIPT = "inputTranscript";
+    public static final String CURRENT_INTENT = "currentIntent";
 
     public static final String TODAY = "Today";
     public static final String WEEK = "Week";
