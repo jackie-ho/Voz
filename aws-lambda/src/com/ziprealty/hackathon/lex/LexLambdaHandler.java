@@ -90,10 +90,10 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
 
                         }
                     } else if (FULFILLMENT_CODE_HOOK.equals(lexRequest.getInvocationSource())){
-                        message = new Message(PLAIN_TEXT, "IM HERE and invocation source is  " + lexRequest.getInvocationSource());
-                        contact = getContactFromRequest(lexRequest);
-                        sessionAttributes = createSessionAttributesFromContact(contact);
+                        message = new Message(PLAIN_TEXT, "Calling " + lexRequest.getSlots().get(FULL_NAME));
                         dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+                        String phoneNumber = getPhoneNumberFromRequest(lexRequest);
+                        sessionAttributes.setTelephoneNumber(phoneNumber);
                     }
                     break;
                 case DIRECTIONS:

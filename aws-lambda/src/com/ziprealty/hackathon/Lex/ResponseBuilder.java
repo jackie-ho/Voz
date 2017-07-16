@@ -28,9 +28,9 @@ public class ResponseBuilder {
         ApiRequestFactory apiRequest = new ApiRequestFactory();
 
         sql = "SELECT c.first_name, c.last_name, " +
-                "CASE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
+                "CASE '(' || tn.area_code || ')' || ' ' || tn.prefix || '-' || tn.suffix " +
                 "WHEN '()-' then null " +
-                "ELSE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
+                "ELSE '(' || tn.area_code || ')' || ' ' || tn.prefix || '-' || tn.suffix " +
                 "END as TELEPHONE_NUMBER,  " +
                 "cl.zip_score, c.login, c.customer_id, cl.median_home_price, ca.client_type " +
                 "FROM Customer c " +
@@ -94,13 +94,15 @@ public class ResponseBuilder {
         ApiRequestFactory apiRequestFactory = new ApiRequestFactory();
 
         String sql = String.format("SELECT " +
-                     "CASE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
+                     "CASE '(' || tn.area_code || ')' || ' ' ||  tn.prefix || '-' || tn.suffix " +
                      "WHEN '()-' then null " +
-                     "ELSE '(' || tn.area_code || ')' || tn.prefix || '-' || tn.suffix " +
+                     "ELSE '(' || tn.area_code || ')' || ' ' ||  tn.prefix || '-' || tn.suffix " +
                      "END as TELEPHONE_NUMBER " +
                      "from telephone_number tn " +
                      "join customer c on c.customer_id = tn.customer_id " +
-                     "where lower(c.first_name) = lower('%s') AND lower(c.last_name) = lower('%s')", firstName, lastName);
+                     "join client_agent ca on ca.customer_id = c.customer_id " +
+                     "where lower(c.first_name) = lower('%s') AND lower(c.last_name) = lower('%s') " +
+                     "and ca.agent_id = 251610", firstName, lastName);
 
         SQLResponse sqlResponse = apiRequestFactory.sendGet(sql, "1", "10");
 

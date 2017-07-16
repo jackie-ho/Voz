@@ -1,9 +1,13 @@
 package com.ziprealty.hackathon.pojo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * Created by jamgale on 7/16/17.
  */
 public class TelephoneNumber {
+
+    @JsonProperty("TELEPHONE_NUMBER")
     private String telephoneNumber;
 
 
