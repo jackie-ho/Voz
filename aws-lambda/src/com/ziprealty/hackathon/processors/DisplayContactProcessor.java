@@ -16,9 +16,13 @@ import static com.ziprealty.hackathon.util.SessionAttributeBuilder.createSession
 /**
  * Created by jamgale on 7/16/17.
  */
-public class DisplayContactProcessor {
+class DisplayContactProcessor {
 
-    public static void processDisplayContact(LexRequest lexRequest, LexResponse lexResponse) {
+    private DisplayContactProcessor(){
+
+    }
+
+    static void processDisplayContact(LexRequest lexRequest, LexResponse lexResponse) {
 
         Contact contact = getContactFromRequest(lexRequest);
         String  response = "Showing the contact page for " + contact.getFirstName() + " " + contact.getLastName() + ".";

@@ -1,21 +1,10 @@
 package com.ziprealty.hackathon.lex;
 
-import com.ziprealty.hackathon.lex.messageObject.DialogAction;
-import com.ziprealty.hackathon.lex.messageObject.Message;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
-import com.ziprealty.hackathon.pojo.Contact;
-import com.ziprealty.hackathon.pojo.Event;
 import com.ziprealty.hackathon.processors.Processor;
 
-import java.util.HashMap;
 import java.util.Map;
-
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getContactFromRequest;
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getNextEventFromRequest;
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getPhoneNumberFromRequest;
-import static com.ziprealty.hackathon.util.Constants.*;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -34,9 +23,7 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
         LexRequest lexRequest = LexRequestFactory.createLexRequest(input);
 
         Processor processor = new Processor();
-        LexResponse lexResponse = processor.processIntent(lexRequest);
-
-        return lexResponse;
+        return processor.processIntent(lexRequest);
     }
 }
 

@@ -8,6 +8,9 @@ import com.ziprealty.hackathon.pojo.Contact;
  */
 public class SessionAttributeBuilder {
 
+    private SessionAttributeBuilder() {
+    }
+
     public static SessionAttributes createSessionAttributesFromContact(Contact contact) {
         SessionAttributes sessionAttributes = new SessionAttributes();
         sessionAttributes.setFirstName(contact.getFirstName());

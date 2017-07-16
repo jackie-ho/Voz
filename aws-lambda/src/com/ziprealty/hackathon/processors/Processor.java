@@ -5,20 +5,14 @@ import com.ziprealty.hackathon.lex.LexResponse;
 import com.ziprealty.hackathon.lex.messageObject.DialogAction;
 import com.ziprealty.hackathon.lex.messageObject.Message;
 import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
-import com.ziprealty.hackathon.pojo.Contact;
 import com.ziprealty.hackathon.pojo.Event;
 
-import java.util.HashMap;
-import java.util.Map;
 
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getContactFromRequest;
 import static com.ziprealty.hackathon.lex.ResponseBuilder.getNextEventFromRequest;
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getPhoneNumberFromRequest;
 import static com.ziprealty.hackathon.processors.CallContactProcessor.processCallContactIntent;
 import static com.ziprealty.hackathon.processors.DisplayContactProcessor.processDisplayContact;
 import static com.ziprealty.hackathon.processors.ShowScheduleProcessor.processScheduleIntent;
 import static com.ziprealty.hackathon.util.Constants.*;
-import static com.ziprealty.hackathon.util.SessionAttributeBuilder.createSessionAttributesFromContact;
 
 /**
  * Created by jamgale on 7/16/17.
@@ -53,7 +47,7 @@ public class Processor {
                     break;
                 default:
                     message = new Message(PLAIN_TEXT, "Intent not recognised");
-                    dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+                    lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
 
             }
         }

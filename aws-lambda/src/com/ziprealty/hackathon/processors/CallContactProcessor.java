@@ -1,6 +1,5 @@
 package com.ziprealty.hackathon.processors;
 
-import com.amazonaws.services.dynamodbv2.xspec.S;
 import com.ziprealty.hackathon.lex.LexRequest;
 import com.ziprealty.hackathon.lex.LexResponse;
 import com.ziprealty.hackathon.lex.messageObject.DialogAction;
@@ -18,10 +17,14 @@ import static com.ziprealty.hackathon.util.Constants.FULFILLED;
 /**
  * Created by jamgale on 7/16/17.
  */
-public class CallContactProcessor {
+class CallContactProcessor {
+
+    private CallContactProcessor(){
+
+    }
 
 
-    public static void processCallContactIntent(LexRequest lexRequest, LexResponse lexResponse) {
+    static void processCallContactIntent(LexRequest lexRequest, LexResponse lexResponse) {
         SessionAttributes sessionAttributes = lexResponse.getSessionAttributes();
         // would you like to call 'contact saved from view contact'
         if (DIALOG_CODE_HOOK.equals(lexRequest.getInvocationSource())) {

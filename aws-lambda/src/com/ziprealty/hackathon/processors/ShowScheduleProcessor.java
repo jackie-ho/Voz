@@ -11,10 +11,14 @@ import static com.ziprealty.hackathon.util.Constants.*;
 /**
  * Created by jamgale on 7/16/17.
  */
-public class ShowScheduleProcessor {
+class ShowScheduleProcessor {
+
+    private ShowScheduleProcessor() {
+
+    }
 
 
-    public static void processScheduleIntent(LexRequest lexRequest, LexResponse lexResponse) {
+    static void processScheduleIntent(LexRequest lexRequest, LexResponse lexResponse) {
         String response;
         SessionAttributes sessionAttributes = new SessionAttributes();
         if (SHOW_TODAYS_SCHEDULE.equals(lexRequest.getIntentName())) {
