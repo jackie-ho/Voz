@@ -31,31 +31,75 @@ public class LexLambdaHandler implements RequestHandler<Map<String, Object>, Obj
     @Override
     public LexResponse handleRequest(Map<String, Object> input, Context context) {
 
-        LexRequest lexRequest = LexRequestFactory.createLexRequest(input);
-        String response = "NO RESPONSE SET";
-        SessionAttributes sessionAttributes = new SessionAttributes();
+            LexRequest lexRequest = LexRequestFactory.createLexRequest(input);
+            String response = "NO RESPONSE SET";
+            SessionAttributes sessionAttributes = new SessionAttributes();
 
-        Contact contact;
+            Message message;
+            DialogAction dialogAction = new DialogAction(null, null, null);
 
-        if (DISPLAY_CONTACT_INTENT.equals(lexRequest.getIntentName())) {
-            contact = getContactFromRequest(lexRequest);
-            response = contact.getFirstName() + " " + contact.getLastName();
-            sessionAttributes = createSessionAttributesFromContact(contact);
+            Contact contact;
+
+        try {
+            switch (lexRequest.getIntentName()) {
+                case DISPLAY_CONTACT_INTENT:
+                    contact = getContactFromRequest(lexRequest);
+                    response = "Showing the contact page for " + contact.getFirstName() + " " + contact.getLastName() + ".";
+                    sessionAttributes = createSessionAttributesFromContact(contact);
+                    message = new Message(PLAIN_TEXT, response);
+                    dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+                    break;
+                case SHOW_TODAYS_SCHEDULE:
+                    response = "Showing today's schedule";
+                    sessionAttributes.setInputTranscript(response);
+                    message = new Message(PLAIN_TEXT, response);
+                    dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+                    break;
+                case SHOW_WEEK_SCHEDULE:
+                    response = "Showing this week's schedule";
+                    sessionAttributes.setInputTranscript(response);
+                    message = new Message(PLAIN_TEXT, response);
+                    dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+                    break;
+                case NEXT_EVENT:
+                    Event nextEvent = getNextEvent(lexRequest);
+//                sessionAttributes = createSessionAttributesFromNextEvent(nextEvent);
+                    break;
+                case CALL_CONTACT:
+                    // would you like to call 'contact saved from view contact'
+
+                    if (DIALOG_CODE_HOOK.equals(lexRequest.getInvocationSource())) {
+                        // Try both DELEGATE and ElicitSlot
+                        if (sessionAttributes.getFirstName() != null) {
+                            message = new Message(PLAIN_TEXT, "Would you like to call " + sessionAttributes.getFirstName() + " " + sessionAttributes.getLastName() + "?");
+                            dialogAction = new DialogAction(CONFIRM_INTENT, null, message);
+                        } else {
+                            message = new Message(PLAIN_TEXT, "Who would you like to call?");
+                            dialogAction = new DialogAction(ELICIT_SLOT, null, message);
+                            dialogAction.setSlotToElicit("FullName");
+                        }
+                    } else {
+                        message = new Message(PLAIN_TEXT, lexRequest.getInvocationSource());
+                        contact = getContactFromRequest(lexRequest);
+                        sessionAttributes = createSessionAttributesFromContact(contact);
+                        dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+                    }
+                    break;
+                case DIRECTIONS:
+                    // use nextEvent to ask about directions to the next event
+                    break;
+                default:
+                    message = new Message(PLAIN_TEXT, "Intent not recognised");
+                    dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+
+            }
+        }
+        catch (Exception e) {
+            message = new Message(PLAIN_TEXT, lexRequest.getInvocationSource());
+            dialogAction = new DialogAction(CLOSE, FULFILLED, message);
+            sessionAttributes = new SessionAttributes();
         }
 
-        if (SHOW_TODAYS_SCHEDULE.equals(lexRequest.getIntentName()) || SHOW_WEEK_SCHEDULE.equals(lexRequest.getIntentName())) {
-            response = lexRequest.getInputTranscript();
-//            sessionAttributes.setInputTranscript(response);
-        }
-        if (NEXT_EVENT.equals(lexRequest.getIntentName())) {
-            Event nextEvent = getNextEvent();
-        }
-
-        response = StringUtils.condenseResponse(response);
-
-        Message message = new Message(PLAIN_TEXT, response);
-
-        DialogAction dialogAction = new DialogAction(CLOSE, FULFILLED, message);
         return new LexResponse(dialogAction, sessionAttributes);
     }
 

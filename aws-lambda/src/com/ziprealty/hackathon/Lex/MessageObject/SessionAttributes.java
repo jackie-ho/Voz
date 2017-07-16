@@ -21,6 +21,8 @@ public class SessionAttributes {
     private String lastName;
     private String firstName;
     private String clientAgentId;
+    private String inputTranscript;
+    private String telephoneNumber;
 
     public String getZipScore() {
         return zipScore;
@@ -110,5 +112,21 @@ public class SessionAttributes {
         this.clientAgentId = clientAgentId;
     }
 
+    public String getInputTranscript() {
+        return inputTranscript;
+    }
+
+    public void setInputTranscript(String inputTranscript) {
+        this.inputTranscript = inputTranscript;
+    }
+
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(String telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
 }
 

@@ -12,6 +12,7 @@ public class LexRequest {
     private boolean hasError;
     private String errorMessage;
     private String inputTranscript;
+    private String invocationSource;
 
     public void setBotName(String botName) {
         this.botName = botName;
@@ -59,5 +60,13 @@ public class LexRequest {
 
     public void setInputTranscript(String inputTranscript) {
         this.inputTranscript = inputTranscript;
+    }
+
+    public String getInvocationSource() {
+        return invocationSource;
+    }
+
+    public void setInvocationSource(String invocationSource) {
+        this.invocationSource = invocationSource;
     }
 }

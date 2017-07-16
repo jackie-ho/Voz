@@ -9,6 +9,7 @@ public class DialogAction {
     private String fulfillmentState;
 
     private Message message;
+    private String slotToElicit;
 
 
     public DialogAction(String type, String fulfillmentState, Message message) {
@@ -28,6 +29,14 @@ public class DialogAction {
 
     public Message getMessage() {
         return message;
+    }
+
+    public String getSlotToElicit() {
+        return slotToElicit;
+    }
+
+    public void setSlotToElicit(String slotToElicit) {
+        this.slotToElicit = slotToElicit;
     }
 
 }

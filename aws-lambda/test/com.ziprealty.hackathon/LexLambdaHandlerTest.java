@@ -12,6 +12,7 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.ziprealty.hackathon.util.Constants.CALL_CONTACT;
 import static com.ziprealty.hackathon.util.Constants.SHOW_TODAYS_SCHEDULE;
 
 /**
@@ -73,6 +74,14 @@ public class LexLambdaHandlerTest {
         String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
         System.out.println(jsonResponse);
         Assert.assertTrue(jsonResponse.equals("This is the transcript"));
+    }
+
+    @Test
+    public void testIllicitMoreInfoWhenToldCallAContact() {
+        currentIntent.put("name", CALL_CONTACT);
+        input.put("bot", botMap);
+        input.put("currentIntent", currentIntent);
+        input.put("inputTranscript", "Call a contact");
     }
 
 
