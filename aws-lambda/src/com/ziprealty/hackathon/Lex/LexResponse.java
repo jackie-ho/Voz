@@ -8,10 +8,13 @@ import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
  */
 public class LexResponse {
     private DialogAction dialogAction;
+
     private SessionAttributes sessionAttributes;
 
     public LexResponse(DialogAction dialogAction, SessionAttributes sessionAttributes) {
-        this.dialogAction = dialogAction;
+        if (dialogAction != null) {
+            this.dialogAction = dialogAction;
+        }
         if (sessionAttributes != null) {
             this.sessionAttributes = sessionAttributes;
         }
@@ -25,4 +28,11 @@ public class LexResponse {
         return sessionAttributes;
     }
 
+    public void setDialogAction(DialogAction dialogAction) {
+        this.dialogAction = dialogAction;
+    }
+
+    public void setSessionAttributes(SessionAttributes sessionAttributes) {
+        this.sessionAttributes = sessionAttributes;
+    }
 }
