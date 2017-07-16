@@ -52,7 +52,7 @@ public class Processor {
             }
         }
         catch (Exception e) {
-            message = new Message(PLAIN_TEXT, "IM at a different spot and HERE and invocation source is  " + lexRequest.getInvocationSource());
+            message = new Message(PLAIN_TEXT, "ERROR: " + sessionAttributes.toString());
             dialogAction = new DialogAction(CLOSE, FULFILLED, message);
             sessionAttributes = new SessionAttributes();
             lexResponse.setDialogAction(dialogAction);

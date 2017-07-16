@@ -30,7 +30,8 @@ class CallContactProcessor {
         if (DIALOG_CODE_HOOK.equals(lexRequest.getInvocationSource())) {
             // Try both DELEGATE and ElicitSlot
             if (sessionAttributes.getFirstName() != null) {
-                useSessionAttributesAndConfirm(sessionAttributes, lexResponse);
+//                useSessionAttributesAndConfirm(sessionAttributes, lexResponse);
+                fulfillCall(lexRequest, lexResponse, sessionAttributes);
             } else if (lexRequest.getSlots().get(FULL_NAME) == null ) {
                 elicitSlot(lexResponse);
             }

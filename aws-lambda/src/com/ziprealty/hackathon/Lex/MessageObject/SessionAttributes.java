@@ -146,5 +146,19 @@ public class SessionAttributes {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString(){
+        return "{ \"first_name\" : \"" + firstName + "\"," +
+               "\"last_name\" : \"" + lastName + "\"," +
+               "\"customer_id\" :" + customerId + "\"," +
+               "\"zipScore\" : \"" + zipScore + "\"," +
+               "\"email\" : \"" + email + "\"," +
+               "\"median_home_price\" : \"" + medianHomePrice + "\"," +
+               "\"schedule\" : \"" + schedule + "\"," +
+               "\"telephone_number\" : \"" + schedule + "\"," +
+               "\"input_transcript\" : \"" + inputTranscript + "\"," +
+               "\"input_transcript\" : \"" + inputTranscript + "}";
+    }
 }
 
