@@ -55,7 +55,7 @@ public class Processor {
             }
         }
         catch (Exception e) {
-            message = new Message(PLAIN_TEXT, "ERROR: " + sessionAttributes.toString());
+            message = new Message(PLAIN_TEXT, "ERROR:");
             dialogAction = new DialogAction(CLOSE, FULFILLED, message);
             sessionAttributes = new HashMap<>();
             lexResponse.setDialogAction(dialogAction);

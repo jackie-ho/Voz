@@ -68,6 +68,9 @@ class CallContactProcessor {
         Message message = new Message(PLAIN_TEXT, "Would you like to call " + firstName + " " + lastName + "?");
         Map<String, Object> slots = new HashMap<>();
         slots.put(FULL_NAME, firstName + " " + lastName);
-        lexResponse.setDialogAction(new DialogAction(CONFIRM_INTENT, null, message));
+        DialogAction dialogAction = new DialogAction(CONFIRM_INTENT, null, message);git comm
+        dialogAction.setIntentName(CALL_CONTACT);
+        dialogAction.setSlots(slots);
+        lexResponse.setDialogAction(dialogAction);
     }
 }
