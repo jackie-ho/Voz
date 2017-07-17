@@ -62,7 +62,12 @@ class CallContactProcessor {
     }
 
     private static void useSessionAttributesAndConfirm(LexResponse lexResponse) {
-        Message message = new Message(PLAIN_TEXT, "Would you like to call " + lexResponse.getSessionAttribute("first_name") + " " + lexResponse.getSessionAttribute("last_name") + "?");
+        String firstName = lexResponse.getSessionAttribute("first_name");
+        String lastName = lexResponse.getSessionAttribute("last_name");
+
+        Message message = new Message(PLAIN_TEXT, "Would you like to call " + firstName + " " + lastName + "?");
+        Map<String, Object> slots = new HashMap<>();
+        slots.put(FULL_NAME, firstName + " " + lastName);
         lexResponse.setDialogAction(new DialogAction(CONFIRM_INTENT, null, message));
     }
 }
