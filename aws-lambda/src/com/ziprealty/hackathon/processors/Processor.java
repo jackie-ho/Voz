@@ -9,6 +9,7 @@ import com.ziprealty.hackathon.lex.response.Message;
 import java.util.Map;
 
 import static com.ziprealty.hackathon.processors.CallContactProcessor.processCallContactIntent;
+import static com.ziprealty.hackathon.processors.ContactPageProcessor.processContactPage;
 import static com.ziprealty.hackathon.processors.DirectionProcessor.processDirections;
 import static com.ziprealty.hackathon.processors.DisplayContactProcessor.processDisplayContact;
 import static com.ziprealty.hackathon.processors.ShowScheduleProcessor.processScheduleIntent;
@@ -39,6 +40,8 @@ public class Processor {
                 case NEXT_EVENT:
                     sessionAttributes.put("next_event", "true");
                     lexResponse.setSessionAttributes(sessionAttributes);
+                    message = new Message(PLAIN_TEXT, "Here is your next event");
+                    lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
                     break;
                 case CALL_CONTACT:
                     processCallContactIntent(lexRequest, lexResponse);
@@ -46,6 +49,14 @@ public class Processor {
                 case DIRECTIONS:
                     processDirections(lexRequest, lexResponse);
                     break;
+                case SHOW_CONTACTS:
+                    sessionAttributes.put("show_contacts", "true");
+                    lexResponse.setSessionAttributes(sessionAttributes);
+                    message = new Message(PLAIN_TEXT, "loading contacts");
+                    lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
+//                    processContactPage(lexRequest, lexResponse);
+                    break;
+
                 default:
                     message = new Message(PLAIN_TEXT, "Intent not recognised");
                     lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
@@ -58,8 +69,6 @@ public class Processor {
 
         return lexResponse;
     }
-
-
 
     private void processStartListening(LexResponse lexResponse) {
         Map<String, String> sessionAttributes = lexResponse.getSessionAttributes();

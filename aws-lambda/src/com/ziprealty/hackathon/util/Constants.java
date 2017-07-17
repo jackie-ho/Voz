@@ -34,6 +34,7 @@ public final class Constants {
     public static final String CALL_CONTACT = "CallContact";
     public static final String DIRECTIONS = "Directions";
     public static final String HEY_ZAP = "HeyZap";
+    public static final String SHOW_CONTACTS = "ShowContacts";
 
     // SLOT NAMES
     public static final String FULL_NAME = "FullName";

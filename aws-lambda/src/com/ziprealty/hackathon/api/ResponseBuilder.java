@@ -11,6 +11,7 @@ import com.ziprealty.hackathon.pojo.TelephoneNumber;
 import com.ziprealty.hackathon.zap.ApiRequestFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -130,7 +131,7 @@ public class ResponseBuilder {
         ApiRequestFactory apiRequestFactory = new ApiRequestFactory();
 
         String sql = String.format("SELECT street_address " +
-                "from customer " +
+                "from customer c " +
                 "join client_agent ca on ca.customer_id = c.customer_id " +
                 "where lower(c.first_name) = lower('%s') AND lower(c.last_name) = lower('%s') " +
                 "and ca.agent_id = 251610", firstName, lastName);
@@ -151,4 +152,35 @@ public class ResponseBuilder {
 
     }
 
+    public static List<Contact> getContacts() {
+        ApiRequestFactory apiRequestFactory = new ApiRequestFactory();
+
+        String sql = "SELECT c.first_name, c.last_name, " +
+                "CASE '(' || tn.area_code || ')' || ' ' || tn.prefix || '-' || tn.suffix " +
+                "WHEN '()-' then null " +
+                "ELSE '(' || tn.area_code || ')' || ' ' || tn.prefix || '-' || tn.suffix " +
+                "END as TELEPHONE_NUMBER,  " +
+                "cl.zip_score, c.login, c.customer_id, cl.median_home_price, ca.client_type " +
+                "FROM Customer c " +
+                "JOIN client cl on cl.customer_id = c.customer_id " +
+                "LEFT JOIN telephone_number tn on c.customer_id = tn.customer_id AND tn.is_active = 1 AND tn.is_primary = 1 " +
+                "JOIN client_agent ca on ca.customer_id = c.customer_id " +
+                "AND ca.agent_id = 251610 ";
+
+        SQLResponse sqlResponse = apiRequestFactory.sendGet(sql, "1", "10");
+        // if we get more than one item in the list, we should throw an error or ask to specify which person they mean, by the email address perhaps
+
+        try {
+            List<Contact> contactResponseList = JSONParser.parseJSONToContact(sqlResponse.getMessage());
+            if (contactResponseList.isEmpty()) {
+                return new ArrayList<>();
+            } else {
+                return contactResponseList;
+            }
+
+        }
+        catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
 }

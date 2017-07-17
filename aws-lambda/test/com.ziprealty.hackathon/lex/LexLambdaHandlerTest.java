@@ -39,6 +39,8 @@ public class LexLambdaHandlerTest {
         currentIntent   = new HashMap<>();
         slots           = new HashMap<>();
 
+        input.put(SESSION_ATTRIBUTES, sessionAttributes);
+
         botMap.put("alias", "testRequestBot");
         botMap.put("name", "TestBotVoz");
     }
@@ -81,6 +83,19 @@ public class LexLambdaHandlerTest {
         input.put("inputTranscript", "Call a contact");
     }
 
+
+    @Test
+    public void testGetsMichellesAddress(){
+        currentIntent.put("name", DIRECTIONS);
+        slots.put("FullName", "Michelle Martinez");
+        currentIntent.put("slots", slots);
+
+        input.put("bot", botMap);
+        input.put("currentIntent", currentIntent);
+        LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
+        Assert.assertTrue(lexResponse.getSessionAttribute("address").contains("Mission"));
+    }
+
     @Test
     public void testGetPhoneNumberWhenCallingAContact() {
         currentIntent.put("name", CALL_CONTACT);
@@ -90,7 +105,6 @@ public class LexLambdaHandlerTest {
         input.put("bot", botMap);
         input.put("currentIntent", currentIntent);
         input.put("inputTranscript", "Call a contact");
-        input.put(SESSION_ATTRIBUTES, sessionAttributes);
 
 
         input.put(INVOCATION_SOURCE, FULFILLMENT_CODE_HOOK);

@@ -28,6 +28,5 @@ class DirectionProcessor {
         Message message = new Message(PLAIN_TEXT, "Getting directions to " + address);
         lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
         lexResponse.setSessionAttributes(sessionAttributes);
-
     }
 }

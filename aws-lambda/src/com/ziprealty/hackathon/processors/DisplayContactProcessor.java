@@ -24,9 +24,11 @@ class DisplayContactProcessor {
     static void processDisplayContact(LexRequest lexRequest, LexResponse lexResponse) {
 
         Contact contact = getContactFromRequest(lexRequest);
-        Map<String, String> sessionAttributes = createSessionAttributesFromContact(lexResponse.getSessionAttributes(), contact);
+        Map<String, String> sessionAttributes = createSessionAttributesFromContact(lexResponse.getSessionAttributes(), contact, "");
 
         lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, null));
         lexResponse.setSessionAttributes(sessionAttributes);
     }
+
+
 }
