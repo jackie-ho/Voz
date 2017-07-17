@@ -24,7 +24,7 @@ public class Processor {
     public LexResponse processIntent(LexRequest lexRequest) {
 
 
-        Map<String, String> sessionAttributes = new HashMap<>();
+        Map<String, String> sessionAttributes = lexRequest.getSessionAttributes();
         Message message;
         DialogAction dialogAction;
         LexResponse lexResponse = new LexResponse(null, null);
