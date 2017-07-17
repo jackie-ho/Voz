@@ -25,6 +25,8 @@ public class LexRequestFactory {
 
             String invocationSource = (String) input.get(INVOCATION_SOURCE);
 
+            Map<String, String> sessionAttributes = (Map<String, String>) input.get(SESSION_ATTRIBUTES);
+
             // Set Request info
 
             lexRequest.setBotName(botName);
@@ -32,6 +34,7 @@ public class LexRequestFactory {
             lexRequest.setSlots(slots);
             lexRequest.setInputTranscript(inputTranscript);
             lexRequest.setInvocationSource(invocationSource);
+            lexRequest.setSessionAttributes(sessionAttributes);
 
         }
         catch (Exception e) {

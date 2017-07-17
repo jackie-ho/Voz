@@ -1,7 +1,8 @@
 package com.ziprealty.hackathon.lex;
 
-import com.ziprealty.hackathon.lex.messageObject.DialogAction;
-import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
+import com.ziprealty.hackathon.lex.response.DialogAction;
+
+import java.util.Map;
 
 /**
  * Created by jamgale on 7/14/17.
@@ -9,9 +10,9 @@ import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
 public class LexResponse {
     private DialogAction dialogAction;
 
-    private SessionAttributes sessionAttributes;
+    private Map<String, String> sessionAttributes;
 
-    public LexResponse(DialogAction dialogAction, SessionAttributes sessionAttributes) {
+    public LexResponse(DialogAction dialogAction, Map<String, String> sessionAttributes) {
         if (dialogAction != null) {
             this.dialogAction = dialogAction;
         }
@@ -24,15 +25,19 @@ public class LexResponse {
         return dialogAction;
     }
 
-    public SessionAttributes getSessionAttributes() {
+    public Map<String, String> getSessionAttributes() {
         return sessionAttributes;
+    }
+
+    public String getSessionAttribute(String key){
+        return sessionAttributes.get(key);
     }
 
     public void setDialogAction(DialogAction dialogAction) {
         this.dialogAction = dialogAction;
     }
 
-    public void setSessionAttributes(SessionAttributes sessionAttributes) {
+    public void setSessionAttributes(Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
     }
 }

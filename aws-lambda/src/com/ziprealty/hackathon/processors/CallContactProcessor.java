@@ -2,9 +2,8 @@ package com.ziprealty.hackathon.processors;
 
 import com.ziprealty.hackathon.lex.LexRequest;
 import com.ziprealty.hackathon.lex.LexResponse;
-import com.ziprealty.hackathon.lex.messageObject.DialogAction;
-import com.ziprealty.hackathon.lex.messageObject.Message;
-import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
+import com.ziprealty.hackathon.lex.response.DialogAction;
+import com.ziprealty.hackathon.lex.response.Message;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,13 +24,12 @@ class CallContactProcessor {
 
 
     static void processCallContactIntent(LexRequest lexRequest, LexResponse lexResponse) {
-        SessionAttributes sessionAttributes = lexResponse.getSessionAttributes();
+        Map<String, String> sessionAttributes = lexResponse.getSessionAttributes();
         // would you like to call 'contact saved from view contact'
         if (DIALOG_CODE_HOOK.equals(lexRequest.getInvocationSource())) {
             // Try both DELEGATE and ElicitSlot
-            if (sessionAttributes.getFirstName() != null) {
-//                useSessionAttributesAndConfirm(sessionAttributes, lexResponse);
-                fulfillCall(lexRequest, lexResponse, sessionAttributes);
+            if (lexResponse.getSessionAttributes().containsKey("first_name")) {
+                useSessionAttributesAndConfirm(lexResponse);
             } else if (lexRequest.getSlots().get(FULL_NAME) == null ) {
                 elicitSlot(lexResponse);
             }
@@ -43,13 +41,10 @@ class CallContactProcessor {
         }
     }
 
-    private static void fulfillCall(LexRequest lexRequest, LexResponse lexResponse, SessionAttributes sessionAttributes) {
-        if (sessionAttributes == null) {
-            sessionAttributes = new SessionAttributes();
-        }
+    private static void fulfillCall(LexRequest lexRequest, LexResponse lexResponse, Map<String, String> sessionAttributes) {
         Message message = new Message(PLAIN_TEXT, "Calling " + lexRequest.getSlots().get(FULL_NAME));
         String phoneNumber = getPhoneNumberFromRequest(lexRequest);
-        sessionAttributes.setTelephoneNumber(phoneNumber);
+        sessionAttributes.put("telephone_number", phoneNumber);
         lexResponse.setSessionAttributes(sessionAttributes);
         lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
     }
@@ -66,8 +61,8 @@ class CallContactProcessor {
         lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
     }
 
-    private static void useSessionAttributesAndConfirm(SessionAttributes sessionAttributes, LexResponse lexResponse) {
-        Message message = new Message(PLAIN_TEXT, "Would you like to call " + sessionAttributes.getFirstName() + " " + sessionAttributes.getLastName() + "?");
+    private static void useSessionAttributesAndConfirm(LexResponse lexResponse) {
+        Message message = new Message(PLAIN_TEXT, "Would you like to call " + lexResponse.getSessionAttribute("first_name") + " " + lexResponse.getSessionAttribute("last_name") + "?");
         lexResponse.setDialogAction(new DialogAction(CONFIRM_INTENT, null, message));
     }
 }

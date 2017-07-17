@@ -1,12 +1,6 @@
 package com.ziprealty.hackathon.lex;
 
-import com.amazonaws.services.lambda.runtime.ClientContext;
-import com.amazonaws.services.lambda.runtime.CognitoIdentity;
 import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.LambdaLogger;
-import com.ziprealty.hackathon.lex.LexLambdaHandler;
-import com.ziprealty.hackathon.lex.LexResponse;
-import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -76,7 +70,7 @@ public class LexLambdaHandlerTest {
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
         String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
         System.out.println(jsonResponse);
-        Assert.assertTrue(lexResponse.getSessionAttributes().getSchedule().equals(TODAY));
+        Assert.assertTrue(lexResponse.getSessionAttribute("schedule").equals(TODAY));
     }
 
     @Test
@@ -102,8 +96,7 @@ public class LexLambdaHandlerTest {
         input.put(INVOCATION_SOURCE, FULFILLMENT_CODE_HOOK);
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        SessionAttributes sessionAttributes = lexResponse.getSessionAttributes();
-        Assert.assertEquals(sessionAttributes.getTelephoneNumber(), TEST_TELEPHONE_NUMBER);
+        Assert.assertEquals(lexResponse.getSessionAttribute("telephone_number"), TEST_TELEPHONE_NUMBER);
 
     }
 

@@ -2,11 +2,13 @@ package com.ziprealty.hackathon.processors;
 
 import com.ziprealty.hackathon.lex.LexRequest;
 import com.ziprealty.hackathon.lex.LexResponse;
-import com.ziprealty.hackathon.lex.messageObject.DialogAction;
-import com.ziprealty.hackathon.lex.messageObject.Message;
-import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
+import com.ziprealty.hackathon.lex.response.DialogAction;
+import com.ziprealty.hackathon.lex.response.Message;
 import com.ziprealty.hackathon.pojo.Event;
 
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.ziprealty.hackathon.lex.ResponseBuilder.getNextEventFromRequest;
 import static com.ziprealty.hackathon.processors.CallContactProcessor.processCallContactIntent;
@@ -22,10 +24,11 @@ public class Processor {
     public LexResponse processIntent(LexRequest lexRequest) {
 
 
-        SessionAttributes sessionAttributes = new SessionAttributes();
+        Map<String, String> sessionAttributes = new HashMap<>();
         Message message;
         DialogAction dialogAction;
         LexResponse lexResponse = new LexResponse(null, null);
+        lexResponse.setSessionAttributes(sessionAttributes);
         try {
             switch (lexRequest.getIntentName()) {
                 case DISPLAY_CONTACT_INTENT:
@@ -54,7 +57,7 @@ public class Processor {
         catch (Exception e) {
             message = new Message(PLAIN_TEXT, "ERROR: " + sessionAttributes.toString());
             dialogAction = new DialogAction(CLOSE, FULFILLED, message);
-            sessionAttributes = new SessionAttributes();
+            sessionAttributes = new HashMap<>();
             lexResponse.setDialogAction(dialogAction);
             lexResponse.setSessionAttributes(sessionAttributes);
         }

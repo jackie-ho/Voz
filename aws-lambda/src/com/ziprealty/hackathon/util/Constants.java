@@ -5,7 +5,7 @@ package com.ziprealty.hackathon.util;
  */
 public final class Constants {
 
-    // PROPERTIES
+    // RESPONSE PROPERTIES
     public static final String PLAIN_TEXT = "PlainText";
     public static final String FULFILLED = "Fulfilled";
     public static final String CLOSE = "Close";
@@ -15,8 +15,9 @@ public final class Constants {
     public static final String DIALOG_CODE_HOOK = "DialogCodeHook";
     public static final String FULFILLMENT_CODE_HOOK = "FulfillmentCodeHook";
 
-
+    // INPUT PROPERTIES
     public static final String INVOCATION_SOURCE = "invocationSource";
+    public static final String SESSION_ATTRIBUTES = "sessionAttributes";
     public static final String INPUT_TRANSCRIPT = "inputTranscript";
     public static final String CURRENT_INTENT = "currentIntent";
 

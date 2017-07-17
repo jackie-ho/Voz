@@ -13,6 +13,7 @@ public class LexRequest {
     private String errorMessage;
     private String inputTranscript;
     private String invocationSource;
+    private Map<String, String> sessionAttributes;
 
     public void setBotName(String botName) {
         this.botName = botName;
@@ -68,5 +69,13 @@ public class LexRequest {
 
     public void setInvocationSource(String invocationSource) {
         this.invocationSource = invocationSource;
+    }
+
+    public Map<String, String> getSessionAttributes() {
+        return sessionAttributes;
+    }
+
+    public void setSessionAttributes(Map<String, String> sessionAttributes) {
+        this.sessionAttributes = sessionAttributes;
     }
 }

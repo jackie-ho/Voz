@@ -1,7 +1,7 @@
 package com.ziprealty.hackathon.lex;
 
 import com.ziprealty.hackathon.jackson.JSONParser;
-import com.ziprealty.hackathon.lex.messageObject.SQLResponse;
+import com.ziprealty.hackathon.lex.response.SQLResponse;
 import com.ziprealty.hackathon.pojo.Contact;
 import com.ziprealty.hackathon.pojo.Event;
 import com.ziprealty.hackathon.pojo.TelephoneNumber;

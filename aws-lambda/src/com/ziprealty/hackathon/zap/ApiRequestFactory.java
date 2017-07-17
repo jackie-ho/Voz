@@ -1,7 +1,7 @@
 package com.ziprealty.hackathon.zap;
 
 
-import com.ziprealty.hackathon.lex.messageObject.SQLResponse;
+import com.ziprealty.hackathon.lex.response.SQLResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;

@@ -2,9 +2,11 @@ package com.ziprealty.hackathon.processors;
 
 import com.ziprealty.hackathon.lex.LexRequest;
 import com.ziprealty.hackathon.lex.LexResponse;
-import com.ziprealty.hackathon.lex.messageObject.DialogAction;
-import com.ziprealty.hackathon.lex.messageObject.Message;
-import com.ziprealty.hackathon.lex.messageObject.SessionAttributes;
+import com.ziprealty.hackathon.lex.response.DialogAction;
+import com.ziprealty.hackathon.lex.response.Message;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.ziprealty.hackathon.util.Constants.*;
 
@@ -20,19 +22,18 @@ class ShowScheduleProcessor {
 
     static void processScheduleIntent(LexRequest lexRequest, LexResponse lexResponse) {
         String response;
-        SessionAttributes sessionAttributes = new SessionAttributes();
+        Map<String, String> sessionAttributes = new HashMap<>();
         if (SHOW_TODAYS_SCHEDULE.equals(lexRequest.getIntentName())) {
             response = "Showing today's schedule";
-            sessionAttributes.setSchedule(TODAY);
+            sessionAttributes.put("schedule", TODAY);
         }
         else if (SHOW_WEEK_SCHEDULE.equals(lexRequest.getIntentName())) {
             response = "Showing this week's schedule";
-            sessionAttributes.setSchedule(WEEK);
+            sessionAttributes.put("schedule", WEEK);
         }
         else {
             response = "error: schedule intent malfunction";
         }
-        sessionAttributes.setInputTranscript(response);
         Message message = new Message(PLAIN_TEXT, response);
         lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
         lexResponse.setSessionAttributes(sessionAttributes);
