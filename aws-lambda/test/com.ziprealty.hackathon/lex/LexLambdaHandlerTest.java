@@ -24,6 +24,7 @@ public class LexLambdaHandlerTest {
     private Map<String, Object> botMap;
     private Map<String, Object> currentIntent;
     private Map<String, Object> slots;
+    private Map<String, String> sessionAttributes = new HashMap<>();
 
     private LexLambdaHandler testLambdaHandler;
 
@@ -54,9 +55,8 @@ public class LexLambdaHandlerTest {
         input.put("currentIntent", currentIntent);
 
         LexResponse lexResponse = testLambdaHandler.handleRequest(input, testContext);
-        String jsonResponse = lexResponse.getDialogAction().getMessage().getContent();
-        System.out.println(jsonResponse);
-        Assert.assertTrue(jsonResponse.contains("Michelle"));
+        Map<String, String> sessionAttributes = lexResponse.getSessionAttributes();
+        Assert.assertEquals(sessionAttributes.get("first_name"), "Michelle");
     }
 
     @Test
@@ -87,10 +87,10 @@ public class LexLambdaHandlerTest {
 
         slots.put("FullName", "Michelle Martinez");
         currentIntent.put("slots", slots);
-
         input.put("bot", botMap);
         input.put("currentIntent", currentIntent);
         input.put("inputTranscript", "Call a contact");
+        input.put(SESSION_ATTRIBUTES, sessionAttributes);
 
 
         input.put(INVOCATION_SOURCE, FULFILLMENT_CODE_HOOK);

@@ -5,6 +5,9 @@ import com.ziprealty.hackathon.pojo.Contact;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.ziprealty.hackathon.util.Constants.FIRST_NAME;
+import static com.ziprealty.hackathon.util.Constants.LAST_NAME;
+
 /**
  * Created by jamgale on 7/16/17.
  */
@@ -13,10 +16,9 @@ public class SessionAttributeBuilder {
     private SessionAttributeBuilder() {
     }
 
-    public static Map<String, String>  createSessionAttributesFromContact(Contact contact) {
-        Map<String, String> sessionAttributes = new HashMap<>();
-        sessionAttributes.put("first_name", contact.getFirstName());
-        sessionAttributes.put("last_name", contact.getLastName());
+    public static Map<String, String>  createSessionAttributesFromContact(Map<String, String> sessionAttributes, Contact contact) {
+        sessionAttributes.put(FIRST_NAME, contact.getFirstName());
+        sessionAttributes.put(LAST_NAME, contact.getLastName());
         sessionAttributes.put("customer_id", Integer.toString(contact.getCustomerId()));
         sessionAttributes.put("median_home_price", contact.getMedianPrice());
         sessionAttributes.put("client_type", contact.getClientType());

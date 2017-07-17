@@ -14,6 +14,7 @@ public class LexRequest {
     private String inputTranscript;
     private String invocationSource;
     private Map<String, String> sessionAttributes;
+    private String confirmationStatus;
 
     public void setBotName(String botName) {
         this.botName = botName;
@@ -77,5 +78,13 @@ public class LexRequest {
 
     public void setSessionAttributes(Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
+    }
+
+    public String getConfirmationStatus() {
+        return confirmationStatus;
+    }
+
+    public void setConfirmationStatus(String confirmationStatus) {
+        this.confirmationStatus = confirmationStatus;
     }
 }

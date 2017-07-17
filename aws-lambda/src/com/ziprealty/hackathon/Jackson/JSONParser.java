@@ -2,6 +2,7 @@ package com.ziprealty.hackathon.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.ziprealty.hackathon.pojo.Address;
 import com.ziprealty.hackathon.pojo.Contact;
 import com.ziprealty.hackathon.pojo.Personnel;
 import com.ziprealty.hackathon.pojo.TelephoneNumber;
@@ -36,4 +37,14 @@ public class JSONParser {
 
         return objectMapper.readValue(jsonString, typeFactory.constructCollectionType(List.class, TelephoneNumber.class));
     }
+
+    public static List<Address> parseJSONToAddress(String jsonString) throws IOException {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        TypeFactory typeFactory = objectMapper.getTypeFactory();
+
+        return objectMapper.readValue(jsonString, typeFactory.constructCollectionType(List.class, Address.class));
+    }
+
+
 }

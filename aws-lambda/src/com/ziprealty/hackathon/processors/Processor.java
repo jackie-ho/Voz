@@ -4,14 +4,12 @@ import com.ziprealty.hackathon.lex.LexRequest;
 import com.ziprealty.hackathon.lex.LexResponse;
 import com.ziprealty.hackathon.lex.response.DialogAction;
 import com.ziprealty.hackathon.lex.response.Message;
-import com.ziprealty.hackathon.pojo.Event;
 
 
-import java.util.HashMap;
 import java.util.Map;
 
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getNextEventFromRequest;
 import static com.ziprealty.hackathon.processors.CallContactProcessor.processCallContactIntent;
+import static com.ziprealty.hackathon.processors.DirectionProcessor.processDirections;
 import static com.ziprealty.hackathon.processors.DisplayContactProcessor.processDisplayContact;
 import static com.ziprealty.hackathon.processors.ShowScheduleProcessor.processScheduleIntent;
 import static com.ziprealty.hackathon.util.Constants.*;
@@ -26,9 +24,9 @@ public class Processor {
 
         Map<String, String> sessionAttributes = lexRequest.getSessionAttributes();
         Message message;
-        DialogAction dialogAction;
         LexResponse lexResponse = new LexResponse(null, null);
         lexResponse.setSessionAttributes(sessionAttributes);
+
         try {
             switch (lexRequest.getIntentName()) {
                 case DISPLAY_CONTACT_INTENT:
@@ -39,29 +37,35 @@ public class Processor {
                     processScheduleIntent(lexRequest, lexResponse);
                     break;
                 case NEXT_EVENT:
-                    Event nextEvent = getNextEventFromRequest(lexRequest);
-//                sessionAttributes = createSessionAttributesFromNextEvent(nextEvent);
+                    sessionAttributes.put("next_event", "true");
+                    lexResponse.setSessionAttributes(sessionAttributes);
                     break;
                 case CALL_CONTACT:
                     processCallContactIntent(lexRequest, lexResponse);
                     break;
                 case DIRECTIONS:
-                    // use nextEvent to ask about directions to the next event
+                    processDirections(lexRequest, lexResponse);
                     break;
                 default:
                     message = new Message(PLAIN_TEXT, "Intent not recognised");
                     lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
 
             }
-        }
-        catch (Exception e) {
-            message = new Message(PLAIN_TEXT, "ERROR:");
-            dialogAction = new DialogAction(CLOSE, FULFILLED, message);
-            sessionAttributes = new HashMap<>();
-            lexResponse.setDialogAction(dialogAction);
-            lexResponse.setSessionAttributes(sessionAttributes);
+        } catch (Exception e) {
+            message = new Message(PLAIN_TEXT, "ERROR " + e.getMessage());
+            lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, message));
         }
 
         return lexResponse;
+    }
+
+
+
+    private void processStartListening(LexResponse lexResponse) {
+        Map<String, String> sessionAttributes = lexResponse.getSessionAttributes();
+        Message message = new Message(PLAIN_TEXT, "How can I help?");
+        sessionAttributes.put("start_listening", "true");
+        lexResponse.setDialogAction(new DialogAction(ELICIT_INTENT, null, message));
+        lexResponse.setSessionAttributes(sessionAttributes);
     }
 }

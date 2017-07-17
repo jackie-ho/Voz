@@ -11,6 +11,7 @@ public final class Constants {
     public static final String CLOSE = "Close";
     public static final String DELEGATE = "Delegate";
     public static final String CONFIRM_INTENT = "ConfirmIntent";
+    public static final String ELICIT_INTENT = "ElicitIntent";
     public static final String ELICIT_SLOT = "ElicitSlot";
     public static final String DIALOG_CODE_HOOK = "DialogCodeHook";
     public static final String FULFILLMENT_CODE_HOOK = "FulfillmentCodeHook";
@@ -20,6 +21,7 @@ public final class Constants {
     public static final String SESSION_ATTRIBUTES = "sessionAttributes";
     public static final String INPUT_TRANSCRIPT = "inputTranscript";
     public static final String CURRENT_INTENT = "currentIntent";
+    public static final String CONFIRMATION_STATUS = "confirmationStatus";
 
     public static final String TODAY = "Today";
     public static final String WEEK = "Week";
@@ -31,10 +33,14 @@ public final class Constants {
     public static final String NEXT_EVENT = "NextEvent";
     public static final String CALL_CONTACT = "CallContact";
     public static final String DIRECTIONS = "Directions";
+    public static final String HEY_ZAP = "HeyZap";
 
     // SLOT NAMES
-
     public static final String FULL_NAME = "FullName";
+
+    // SESSION ATTRIBUTES
+    public static final String FIRST_NAME = "first_name";
+    public static final String LAST_NAME = "last_name";
 
     public static final    int MAX_STRING_LENGTH = 3000;
 }

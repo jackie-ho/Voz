@@ -7,7 +7,7 @@ import com.ziprealty.hackathon.pojo.Contact;
 
 import java.util.Map;
 
-import static com.ziprealty.hackathon.lex.ResponseBuilder.getContactFromRequest;
+import static com.ziprealty.hackathon.api.ResponseBuilder.getContactFromRequest;
 import static com.ziprealty.hackathon.util.Constants.CLOSE;
 import static com.ziprealty.hackathon.util.Constants.FULFILLED;
 import static com.ziprealty.hackathon.util.SessionAttributeBuilder.createSessionAttributesFromContact;
@@ -24,7 +24,7 @@ class DisplayContactProcessor {
     static void processDisplayContact(LexRequest lexRequest, LexResponse lexResponse) {
 
         Contact contact = getContactFromRequest(lexRequest);
-        Map<String, String> sessionAttributes = createSessionAttributesFromContact(contact);
+        Map<String, String> sessionAttributes = createSessionAttributesFromContact(lexResponse.getSessionAttributes(), contact);
 
         lexResponse.setDialogAction(new DialogAction(CLOSE, FULFILLED, null));
         lexResponse.setSessionAttributes(sessionAttributes);
